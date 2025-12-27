@@ -44,7 +44,7 @@ const caseStudies: CaseStudyCardProps[] = [
 const LightV3 = () => {
   return (
     <div className="bg-background min-h-screen text-primary">
-      <nav className="bg-accent/40 backdrop-blur-lg max-w-7xl p-4 mx-auto rounded-lg fixed top-4 left-0 right-0 z-50">
+      <nav className="bg-accent/40 backdrop-blur-lg container p-4 rounded-lg fixed top-4 left-0 right-0 z-50">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-4">
             <Image
@@ -236,7 +236,7 @@ const LightV3 = () => {
       </section>
 
       {/* About section */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
+      <section className="py-24 container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-lustria mb-4">About Me</h2>
           <div className="h-1 w-20 bg-accent mx-auto"></div>

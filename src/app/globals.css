@@ -164,3 +164,27 @@
     @apply underline text-orange-600 hover:opacity-90 transition-opacity;
   }
 }
+
+@layer utilities {
+  .container {
+    @apply mx-auto w-[90vw] sm:w-[85vw] max-w-[1340px];
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    @apply bg-orange-100;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-orange-300 rounded-full;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-orange-400;
+  }
+}
