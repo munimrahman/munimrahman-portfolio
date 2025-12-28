@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import ReactLenis from "lenis/react";
 import React, { useRef } from "react";
-import { CaseStudyCard, CaseStudyCardProps } from "../CaseStudyCard";
+import { CaseStudyCard, CaseStudyCardProps } from "../../CaseStudyCard";
 
 const caseStudies: CaseStudyCardProps[] = [
   {
@@ -41,29 +41,6 @@ const caseStudies: CaseStudyCardProps[] = [
     userSatisfaction: "4.5",
     image: "/web-4.avif",
     cardBackground: "#D1EAFA",
-  },
-];
-
-const projects = [
-  {
-    title: "Project 1",
-    src: "/images/p1.avif",
-  },
-  {
-    title: "Project 2",
-    src: "/images/p2.avif",
-  },
-  {
-    title: "Project 3",
-    src: "/images/p3.avif",
-  },
-  {
-    title: "Project 4",
-    src: "/images/p4.avif",
-  },
-  {
-    title: "Project 5",
-    src: "/images/p5.avif",
   },
 ];
 
