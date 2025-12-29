@@ -59,26 +59,26 @@ const AboutMePage = () => {
     <>
       <AboutHeroSection />
 
+      {/* Skills Section - "My Tech Stack" */}
+      <AboutPageSkillSection className="bg-card py-32" />
+
       {/* Journey Section - "My Journey into Web Development" */}
-      <AboutJourneySection className="bg-background" />
+      <AboutJourneySection className="bg-background py-32" />
 
       {/* Specialization Section - "What I Specialize In" */}
       <AboutSpecializationSection />
-
-      {/* Skills Section - "My Tech Stack" */}
-      <AboutPageSkillSection className="bg-background py-24" />
 
       {/* Process Section - "How I Work" */}
       <AboutProcessSection className="bg-card" />
 
       {/* Experience Section - "Experience & Approach" */}
-      <ExperienceSectionV2 className="py-24 bg-background" />
+      <ExperienceSectionV2 className="py-32 bg-background" />
 
       {/* Clients Section - "Who I Work With" */}
       <AboutClientsSection />
 
       {/* Faq Section */}
-      <FAQSection faqs={faqData} className="bg-card py-24" />
+      <FAQSection faqs={faqData} className="bg-card py-32" />
 
       {/* CTA Section - "Let's Build Something Together" */}
       <AboutCTASection className="bg-background" />

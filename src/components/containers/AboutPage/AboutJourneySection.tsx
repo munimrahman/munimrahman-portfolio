@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const AboutJourneySection = ({ className }: ComponentProps) => {
   return (
-    <section className={cn("py-24 relative overflow-hidden", className)}>
+    <section className={cn("relative overflow-hidden", className)}>
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image / Visual Side */}
