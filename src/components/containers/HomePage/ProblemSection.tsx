@@ -12,6 +12,10 @@ import {
 import SectionHeader from "../Shared/SectionHeader";
 import { cn } from "@/lib/utils";
 
+interface Props {
+  className?: string;
+}
+
 const problems = [
   {
     icon: Search,
@@ -51,9 +55,9 @@ const problems = [
   },
 ];
 
-const ProblemSection = () => {
+const ProblemSection = ({ className }: Props) => {
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className={cn("py-20 md:py-32 bg-background", className)}>
       <div className="container max-w-6xl">
         <SectionHeader
           name="The Reality"

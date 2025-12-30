@@ -5,6 +5,8 @@ import ReactLenis from "lenis/react";
 import React, { useRef } from "react";
 import { CaseStudyCard, CaseStudyCardProps } from "../../CaseStudyCard";
 import SectionHeader from "../Shared/SectionHeader";
+import { ComponentProps } from "@/types";
+import { cn } from "@/lib/utils";
 
 const caseStudies: CaseStudyCardProps[] = [
   {
@@ -69,12 +71,12 @@ const StickyCard_001 = ({
   return (
     <div
       ref={container}
-      className="sticky top-0 flex items-center justify-center"
+      className="sticky top-28 flex items-center justify-center"
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 20 + 250}px)`,
+          top: `calc(-5vh + ${i * 30 + 120}px)`,
         }}
         className="rounded-4xl relative -top-1/4 flex origin-top flex-col overflow-hidden"
       >
@@ -93,7 +95,9 @@ const StickyCard_001 = ({
   );
 };
 
-const Skiper16 = () => {
+interface Props extends ComponentProps {}
+
+const FeaturedProject = ({ className }: Props) => {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -102,37 +106,42 @@ const Skiper16 = () => {
 
   return (
     <ReactLenis root>
-      <main
-        ref={container}
-        className="relative flex w-full flex-col items-center justify-center pb-[20vh]"
-      >
-        <SectionHeader
-          name="Featured Projects"
-          title="Real-World Experience"
-          description="Not Just Demos. Production-ready applications."
-        />
-        {caseStudies.map((project, i) => {
-          const targetScale = Math.max(
-            0.5,
-            1 - (caseStudies.length - i - 1) * 0.1
-          );
-          return (
-            <StickyCard_001
-              key={`p_${i}`}
-              i={i}
-              caseStudy={project}
-              progress={scrollYProgress}
-              range={[i * 0.25, 1]}
-              targetScale={targetScale}
-            />
-          );
-        })}
-      </main>
+      <section className={cn("relative", className)}>
+        <div
+          ref={container}
+          className={cn(
+            "relative flex w-full flex-col items-center justify-center pb-[12vh]"
+          )}
+        >
+          <SectionHeader
+            name="Featured Projects"
+            title="Real-World Experience"
+            description="Not Just Demos. Production-ready applications."
+            className="mb-4"
+          />
+          {caseStudies.map((project, i) => {
+            const targetScale = Math.max(
+              0.5,
+              1 - (caseStudies.length - i - 1) * 0.1
+            );
+            return (
+              <StickyCard_001
+                key={`p_${i}`}
+                i={i}
+                caseStudy={project}
+                progress={scrollYProgress}
+                range={[i * 0.25, 1]}
+                targetScale={targetScale}
+              />
+            );
+          })}
+        </div>
+      </section>
     </ReactLenis>
   );
 };
 
-export { Skiper16, StickyCard_001 };
+export { FeaturedProject, StickyCard_001 };
 
 /**
  * Skiper 16 StickyCard_001 — React + Framer Motion

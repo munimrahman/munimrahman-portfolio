@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import SectionHeader from "../Shared/SectionHeader";
 import Link from "next/link";
+import { Briefcase, Users, CheckCircle, Globe } from "lucide-react";
 
 const services = [
   {
@@ -128,6 +129,54 @@ const ServicesSection = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Stats Section */}
+      <div className="container grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full mt-8 animate-in slide-in-from-bottom-6 duration-700 fade-in fill-mode-both delay-300">
+        {[
+          {
+            icon: Briefcase,
+            value: "4+",
+            unit: "Years",
+            label: "Professional Experience",
+          },
+          {
+            icon: CheckCircle,
+            value: "20+",
+            unit: "Projects",
+            label: "Successfully Delivered",
+          },
+          {
+            icon: Users,
+            value: "10+",
+            unit: "Clients",
+            label: "Happy Clients Worldwide",
+          },
+          {
+            icon: Globe,
+            value: "Remote",
+            unit: "",
+            label: "Available Worldwide",
+          },
+        ].map((stat, index) => (
+          <div
+            key={index}
+            className="p-6 rounded-3xl border border-border/40 bg-card/50 backdrop-blur-sm hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300 group"
+          >
+            <div className="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-500 mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+              <stat.icon size={24} />
+            </div>
+            <h3 className="text-3xl font-bold text-foreground mb-1">
+              {stat.value}{" "}
+              <span className="text-base font-normal text-muted-foreground">
+                {stat.unit}
+              </span>
+            </h3>
+            <p className="text-sm font-medium text-muted-foreground/80 mt-2">
+              {stat.label}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

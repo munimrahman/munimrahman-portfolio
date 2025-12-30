@@ -1,11 +1,9 @@
 import React from "react";
 import HomeHeroSection from "@/components/containers/HomePage/HomeHeroSection";
-import { Skiper16 } from "@/components/containers/HomePage/FeaturedProject";
 import FAQSection from "@/components/containers/Shared/FAQSection";
-import TrustSection from "@/components/containers/HomePage/TrustSection";
+import { FeaturedProject } from "@/components/containers/HomePage/FeaturedProject";
 import ProblemSection from "@/components/containers/HomePage/ProblemSection";
 import ServicesSection from "@/components/containers/HomePage/ServicesSection";
-import WhyMeSection from "@/components/containers/HomePage/WhyMeSection";
 import HomeCTASection from "@/components/containers/HomePage/HomeCTASection";
 import { FAQItem } from "@/types";
 import SkillSection from "@/components/containers/HomePage/SkillSection";
@@ -33,13 +31,11 @@ const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
-      <SkillSection />
-      <Skiper16 />
-      <ProblemSection />
-      {/* <ScrollServiceSection /> */}
+      <SkillSection className="py-20 md:py-32 bg-card" />
+      <FeaturedProject className="py-20 md:py-32" />
+      <ProblemSection className="py-20 md:py-32 bg-card" />
       <ServicesSection />
-      <WhyMeSection />
-      <FAQSection faqs={faqData} className="bg-orange-50/50 py-20 md:py-32" />
+      <FAQSection faqs={faqData} className="bg-card py-20 md:py-32" />
       <HomeCTASection />
     </>
   );
