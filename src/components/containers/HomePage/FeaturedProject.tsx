@@ -1,53 +1,56 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, MotionValue } from "motion/react";
 import ReactLenis from "lenis/react";
 import React, { useRef } from "react";
 import { CaseStudyCard, CaseStudyCardProps } from "../../CaseStudyCard";
+import SectionHeader from "../Shared/SectionHeader";
 
 const caseStudies: CaseStudyCardProps[] = [
   {
-    title: "Budget Planner Finance App",
+    title: "SaaS Admin Dashboard",
     description:
-      "With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.",
-    engagement: "12 min",
-    userSatisfaction: "4.5",
+      "A high-performance admin dashboard with role-based access control, real-time data visualization, and seamless API integrations.",
+    engagement: "Fast",
+    userSatisfaction: "5.0",
     image: "/web-1.avif",
-    cardBackground: "#d9f0d3",
+    cardBackground: "#ffedd5", // Orange-100
   },
   {
-    title: "Digital Product Design Solution",
+    title: "Enterprise SEO Platform",
     description:
-      "Focus was to create a user-friendly interface that simplified the process of accessing premium operational web scraping proxies. ",
-    engagement: "12 min",
-    userSatisfaction: "4.5",
+      "Scalable architected Next.js site handling thousands of pages with perfect Core Web Vitals and programmatic SEO structure.",
+    engagement: "SEO",
+    userSatisfaction: "4.9",
     image: "/web-2.avif",
-    cardBackground: "#FAE5D0",
+    cardBackground: "#f3f4f6", // Gray-100
   },
   {
-    title: "Bitbo - Bitcoin Stats & Data",
+    title: "E-commerce MVP",
     description:
-      "Leading Bitcoin Data and Stats site. Live price action, monitor on-chain data, and track key economic indicators.",
-    engagement: "12 min",
-    userSatisfaction: "4.5",
+      "Rapidly developed MVP for a fashion startup, featuring custom checkout flow, inventory management, and fast mobile performance.",
+    engagement: "MVP",
+    userSatisfaction: "4.8",
     image: "/web-3.avif",
-    cardBackground: "#E7E0EB",
+    cardBackground: "#fee2e2", // Red-100
   },
   {
-    title: "UI Design for Internet Sharing App",
+    title: "Marketing Site Rebrand",
     description:
-      "An innovative app and approach for taking advantage of unused internet from people's devices. It differs from others because of its simplicity, functions, and ways to earn extra money.",
-    engagement: "12 min",
-    userSatisfaction: "4.5",
+      "Complete overhaul of a legacy site to a modern, headless CMS powered Next.js application, resulting in 2x faster load times.",
+    engagement: "Rebrand",
+    userSatisfaction: "5.0",
     image: "/web-4.avif",
-    cardBackground: "#D1EAFA",
+    cardBackground: "#e0f2fe", // Sky-100
   },
 ];
 
-interface StickyCard_001Props extends CaseStudyCardProps {
+// ... existing code ...
+
+interface StickyCard_001Props {
   i: number;
   caseStudy: CaseStudyCardProps;
-  progress: any;
+  progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
 }
@@ -103,6 +106,11 @@ const Skiper16 = () => {
         ref={container}
         className="relative flex w-full flex-col items-center justify-center pb-[20vh]"
       >
+        <SectionHeader
+          name="Featured Projects"
+          title="Real-World Experience"
+          description="Not Just Demos. Production-ready applications."
+        />
         {caseStudies.map((project, i) => {
           const targetScale = Math.max(
             0.5,

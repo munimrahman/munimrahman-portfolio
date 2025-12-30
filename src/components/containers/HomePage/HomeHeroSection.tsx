@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, ChevronDown } from "lucide-react";
 
 const HomeHeroSection = () => {
   return (
@@ -69,6 +69,13 @@ const HomeHeroSection = () => {
             <Twitter size={20} />
           </a>
         </div>
+      </div>
+
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-80">
+        <span className="text-sm font-light tracking-widest text-orange-400/80 uppercase">
+          Scroll Down
+        </span>
+        <ChevronDown className="w-6 h-6 text-orange-400" />
       </div>
     </section>
   );
