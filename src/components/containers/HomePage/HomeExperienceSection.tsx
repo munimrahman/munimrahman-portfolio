@@ -28,7 +28,7 @@ const experiences: ExperienceItem[] = [
   },
 ];
 
-const ExperienceSection = ({ className }: { className?: string }) => {
+const HomeExperienceSection = ({ className }: { className?: string }) => {
   return (
     <section className={className}>
       <div className="container">
@@ -61,4 +61,4 @@ const ExperienceSection = ({ className }: { className?: string }) => {
   );
 };
 
-export default ExperienceSection;
+export default HomeExperienceSection;

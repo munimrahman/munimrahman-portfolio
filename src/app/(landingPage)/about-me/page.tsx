@@ -3,11 +3,12 @@ import AboutJourneySection from "@/components/containers/AboutPage/AboutJourneyS
 import AboutSpecializationSection from "@/components/containers/AboutPage/AboutSpecializationSection";
 import AboutPageSkillSection from "@/components/containers/AboutPage/AboutPageSkillSection";
 import AboutProcessSection from "@/components/containers/AboutPage/AboutProcessSection";
-import ExperienceSectionV2 from "@/components/containers/AboutPage/ExperienceSectionV2";
+import AboutPageExperienceSection from "@/components/containers/AboutPage/AboutPageExperienceSection";
 import AboutClientsSection from "@/components/containers/AboutPage/AboutClientsSection";
-import AboutCTASection from "@/components/containers/AboutPage/AboutCTASection";
 import FAQSection from "@/components/containers/Shared/FAQSection";
 import { FAQItem } from "@/types";
+import ServicesCTASection from "@/components/containers/Shared/SearviceCTASection";
+import ContactFormSection from "@/components/containers/Shared/ContactFormSection";
 
 const faqData: FAQItem[] = [
   {
@@ -72,16 +73,19 @@ const AboutMePage = () => {
       <AboutProcessSection className="bg-card" />
 
       {/* Experience Section - "Experience & Approach" */}
-      <ExperienceSectionV2 className="py-32 bg-background" />
+      <AboutPageExperienceSection className="py-32 bg-background" />
 
       {/* Clients Section - "Who I Work With" */}
       <AboutClientsSection />
 
       {/* Faq Section */}
-      <FAQSection faqs={faqData} className="bg-card py-32" />
+      <FAQSection faqs={faqData} className="bg-background py-32" />
 
       {/* CTA Section - "Let's Build Something Together" */}
-      <AboutCTASection className="bg-background" />
+      <ServicesCTASection className="py-20 md:py-32 bg-card" />
+
+      {/* contact form section */}
+      <ContactFormSection className="py-20 md:py-32" />
     </>
   );
 };

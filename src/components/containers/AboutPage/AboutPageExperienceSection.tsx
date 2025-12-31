@@ -55,7 +55,7 @@ const experiences: Experience[] = [
   },
 ];
 
-const ExperienceSectionV2 = ({ className }: { className?: string }) => {
+const AboutPageExperienceSection = ({ className }: { className?: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -185,4 +185,4 @@ const ExperienceSectionV2 = ({ className }: { className?: string }) => {
   );
 };
 
-export default ExperienceSectionV2;
+export default AboutPageExperienceSection;

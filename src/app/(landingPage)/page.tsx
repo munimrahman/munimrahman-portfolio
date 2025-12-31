@@ -4,9 +4,11 @@ import FAQSection from "@/components/containers/Shared/FAQSection";
 import { FeaturedProject } from "@/components/containers/HomePage/FeaturedProject";
 import ProblemSection from "@/components/containers/HomePage/ProblemSection";
 import ServicesSection from "@/components/containers/HomePage/ServicesSection";
-import HomeCTASection from "@/components/containers/HomePage/HomeCTASection";
+import HomeExperienceSection from "@/components/containers/HomePage/HomeExperienceSection";
 import { FAQItem } from "@/types";
 import SkillSection from "@/components/containers/HomePage/SkillSection";
+import ContactFormSection from "@/components/containers/Shared/ContactFormSection";
+import ServicesCTASection from "@/components/containers/Shared/SearviceCTASection";
 
 const faqData: FAQItem[] = [
   {
@@ -35,8 +37,10 @@ const HomePage = () => {
       <FeaturedProject className="py-20 md:py-32" />
       <ProblemSection className="py-20 md:py-32 bg-card" />
       <ServicesSection />
-      <FAQSection faqs={faqData} className="bg-card py-20 md:py-32" />
-      <HomeCTASection />
+      <HomeExperienceSection className="py-20 md:py-32 bg-card" />
+      <ServicesCTASection className="py-20 md:py-32" />
+      <FAQSection faqs={faqData} className="py-20 md:py-32 bg-card" />
+      <ContactFormSection className="py-20 md:py-32" />
     </>
   );
 };

@@ -160,7 +160,7 @@
   body {
     @apply bg-background text-foreground;
   }
-  a {
+  p > a {
     @apply underline text-orange-600 hover:opacity-90 transition-opacity;
   }
 }

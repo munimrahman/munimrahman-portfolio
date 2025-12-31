@@ -121,11 +121,12 @@ const ServicesSection = () => {
 
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Depending on your project needs, I also help with headless CMS
-              integration (Sanity, Strapi, Contentful), Facebook Conversion API
-              and GA4 analytics setup, Next.js + Shopify storefronts, and
-              ongoing performance optimization. These capabilities support
-              scalable architecture, better tracking, and long-term growth
-              across modern web and SaaS applications.
+              integration (Sanity, Strapi, Contentful),{" "}
+              <Link href={"/"}>Facebook Conversion API</Link>, GA4 analytics
+              setup, Next.js + Shopify storefronts, and ongoing performance
+              optimization. These capabilities support scalable architecture,
+              better tracking, and long-term growth across modern web and SaaS
+              applications.
             </p>
           </div>
         </div>
