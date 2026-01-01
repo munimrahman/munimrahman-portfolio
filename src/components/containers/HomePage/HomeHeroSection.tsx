@@ -71,7 +71,7 @@ const HomeHeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-80">
+      <div className="absolute bottom-14 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-80">
         <span className="text-sm font-light tracking-widest text-orange-400/80 uppercase">
           Scroll Down
         </span>
