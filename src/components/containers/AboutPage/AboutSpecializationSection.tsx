@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { ComponentProps } from "@/types";
 import { cn } from "@/lib/utils";
 import { Layout, Globe, Server, Gauge } from "lucide-react";
+import SectionHeader from "../Shared/SectionHeader";
 
 const specializations = [
   {
@@ -39,28 +40,11 @@ const AboutSpecializationSection = ({ className }: ComponentProps) => {
       <div className="absolute inset-0 bg-[radial-gradient(#fb923c_1px,transparent_1px)] bg-size-[20px_20px] opacity-[0.03] pointer-events-none" />
 
       <div className="container relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16 max-w-2xl mx-auto"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="h-px w-8 bg-orange-500/50"></span>
-            <span className="text-sm font-bold tracking-[0.2em] text-orange-500 uppercase">
-              Expertise
-            </span>
-            <span className="h-px w-8 bg-orange-500/50"></span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-            What I <span className="text-orange-500">Specialize In</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            I don’t try to do everything. I focus on areas where I can deliver
-            real impact.
-          </p>
-        </motion.div>
+        <SectionHeader
+          name="Specialization"
+          title="What I Specialize In"
+          description="I don’t try to do everything. I focus on areas where I can deliver real impact."
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {specializations.map((item, index) => (

@@ -60,32 +60,24 @@ const AboutMePage = () => {
     <>
       <AboutHeroSection />
 
-      {/* Skills Section - "My Tech Stack" */}
-      <AboutPageSkillSection className="bg-card py-32" />
+      <AboutPageSkillSection className="bg-card py-16 md:py-32" />
 
-      {/* Journey Section - "My Journey into Web Development" */}
-      <AboutJourneySection className="bg-background py-32" />
+      <AboutJourneySection className="bg-background py-16 md:py-32" />
 
-      {/* Specialization Section - "What I Specialize In" */}
       <AboutSpecializationSection />
 
-      {/* Process Section - "How I Work" */}
       <AboutProcessSection className="bg-card" />
 
-      {/* Experience Section - "Experience & Approach" */}
+      {/* need to be fixed */}
       <AboutPageExperienceSection className="py-32 bg-background" />
 
-      {/* Clients Section - "Who I Work With" */}
-      <AboutClientsSection />
+      {/* <AboutClientsSection />
 
-      {/* Faq Section */}
       <FAQSection faqs={faqData} className="bg-background py-32" />
 
-      {/* CTA Section - "Let's Build Something Together" */}
       <ServicesCTASection className="py-20 md:py-32 bg-card" />
 
-      {/* contact form section */}
-      <ContactFormSection className="py-20 md:py-32" />
+      <ContactFormSection className="py-20 md:py-32" /> */}
     </>
   );
 };

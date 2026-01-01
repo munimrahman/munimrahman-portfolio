@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { ComponentProps } from "@/types";
 import { cn } from "@/lib/utils";
 import { Lightbulb, Workflow, Zap, Rocket } from "lucide-react";
+import SectionHeader from "../Shared/SectionHeader";
 
 const processSteps = [
   {
@@ -39,29 +40,11 @@ const AboutProcessSection = ({ className }: ComponentProps) => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-orange-500/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
       <div className="container relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20 max-w-3xl mx-auto"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="h-px w-8 bg-orange-500/50"></span>
-            <span className="text-sm font-bold tracking-[0.2em] text-orange-500 uppercase">
-              Work Process
-            </span>
-            <span className="h-px w-8 bg-orange-500/50"></span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6">
-            A Methodical Process For <br />{" "}
-            <span className="text-orange-500">Maximum Results</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            I keep my process simple, transparent, and efficient. No fluff, just
-            results.
-          </p>
-        </motion.div>
+        <SectionHeader
+          name="Process"
+          title="Work Process"
+          description="A Methodical Process For Maximum Results"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {processSteps.map((step, index) => (

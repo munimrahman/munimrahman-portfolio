@@ -3,6 +3,7 @@
 import { skillData } from "@/assets/icons/techIcons";
 import { motion, Variants } from "motion/react";
 import { ComponentProps } from "@/types";
+import SectionHeader from "../Shared/SectionHeader";
 
 interface Props extends ComponentProps {}
 
@@ -46,27 +47,11 @@ const AboutPageSkillSection = ({ className }: Props) => {
     <section className={className} id="skills">
       <div className="container">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col items-center justify-center gap-4 text-center mb-20"
-        >
-          <div className="flex items-center gap-4">
-            <span className="h-px w-8 bg-orange-500/50"></span>
-            <span className="text-sm font-bold tracking-[0.2em] text-orange-500 uppercase">
-              Expertise
-            </span>
-            <span className="h-px w-8 bg-orange-500/50"></span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
-            Skills & <span className="text-orange-500">Tools</span>
-          </h2>
-          <p className="max-w-2xl text-muted-foreground mt-4 text-lg">
-            The core stack and tools I use to build robust applications.
-          </p>
-        </motion.div>
+        <SectionHeader
+          title="Skills & Tools"
+          name="Expertise"
+          description="The core stack and tools I use to build robust applications."
+        />
 
         {/* Skills Layout - Centered with Max Width */}
         <div className="max-w-4xl mx-auto flex flex-col gap-12">
@@ -77,7 +62,7 @@ const AboutPageSkillSection = ({ className }: Props) => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={containerVariants}
-              className="flex flex-col md:flex-row gap-6 md:gap-12 items-start"
+              className="flex flex-col md:flex-row gap-6 md:gap-12 items-baseline"
             >
               {/* Category Title (Left Side on Desktop) */}
               <motion.div
