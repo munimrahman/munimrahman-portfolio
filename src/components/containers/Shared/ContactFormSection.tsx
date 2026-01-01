@@ -43,24 +43,24 @@ const ContactFormSection = ({ className }: Props) => {
   };
 
   return (
-    <section className={cn("", className)}>
+    <section className={cn("overflow-hidden", className)}>
       <div className="container relative z-10">
-        <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
           {/* Left Column: Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-between basis-[45%]"
+            className="flex flex-col justify-between gap-8 basis-[45%]"
           >
-            <div className="space-y-16">
+            <div className="space-y-10 md:space-y-16">
               {/* Call Me */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-foreground flex items-center gap-3">
+              <div className="space-y-3 md:space-y-4">
+                <h3 className="text-xl md:text-2xl font-bold text-foreground flex items-center gap-3">
                   Other ways to reach me
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-base md:text-lg">
                   I’m available via email and messaging platforms.
                 </p>
                 <div className="flex items-center gap-4">
@@ -68,10 +68,10 @@ const ContactFormSection = ({ className }: Props) => {
                     href="tel:+8801929645146"
                     className="flex items-center gap-4 group no-underline"
                   >
-                    <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
-                      <Phone size={20} />
+                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                      <Phone size={18} className="md:size-5" />
                     </div>
-                    <span className="text-lg font-semibold text-orange-500 group-hover:text-orange-600 transition-colors">
+                    <span className="text-base md:text-lg font-semibold text-orange-500 group-hover:text-orange-600 transition-colors">
                       +88 01929 64 51 46
                     </span>
                   </a>
@@ -109,10 +109,10 @@ const ContactFormSection = ({ className }: Props) => {
                     href="mailto:hello@munimrahman.com"
                     className="flex items-center gap-4 group no-underline"
                   >
-                    <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
-                      <Mail size={20} />
+                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                      <Mail size={18} className="md:size-5" />
                     </div>
-                    <span className="text-lg font-semibold text-orange-500 group-hover:text-orange-600 transition-colors">
+                    <span className="text-base md:text-lg font-semibold text-orange-500 group-hover:text-orange-600 transition-colors">
                       hello@munimrahman.com
                     </span>
                   </a>
@@ -148,11 +148,11 @@ const ContactFormSection = ({ className }: Props) => {
 
               {/* Chat with me */}
               <div className="space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-foreground">
+                <div className="space-y-1">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground">
                     Chat with me
                   </h3>
-                  <p className="text-muted-foreground text-lg">
+                  <p className="text-muted-foreground text-base md:text-lg">
                     Quick questions or follow-ups
                   </p>
                 </div>
@@ -164,10 +164,10 @@ const ContactFormSection = ({ className }: Props) => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-4 group no-underline"
                   >
-                    <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
-                      <WhatsAppIcon size={20} />
+                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                      <WhatsAppIcon size={18} className="md:size-5" />
                     </div>
-                    <span className="text-lg font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                    <span className="text-base md:text-lg font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                       Message me on WhatsApp
                     </span>
                   </a>
@@ -177,10 +177,10 @@ const ContactFormSection = ({ className }: Props) => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-4 group no-underline"
                   >
-                    <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
-                      <TelegramIcon size={20} />
+                    <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                      <TelegramIcon size={18} className="md:size-5" />
                     </div>
-                    <span className="text-lg font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                    <span className="text-base md:text-lg font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                       Message me on Telegram
                     </span>
                   </a>
@@ -188,24 +188,24 @@ const ContactFormSection = ({ className }: Props) => {
               </div>
             </div>
 
-            <div className="flex gap-4 lg:gap-6 items-end">
-              <figure className="w-20 h-20 md:w-32 md:h-32">
+            <div className="flex gap-4 md:gap-6 items-end">
+              <figure className="w-16 h-16 md:w-28 lg:w-32 md:h-28 lg:h-32">
                 <Image
                   src="/images/about.avif"
                   alt="Contact Us"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded md:rounded-lg"
                   width={150}
                   height={150}
                 />
               </figure>
-              <div className="space-y-2">
-                <h3 className="text-lg lg:text-2xl text-primary">
+              <div className="space-y-1 md:space-y-2">
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary font-bold">
                   Munim Rahman
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-xs md:text-base lg:text-lg">
                   Fullstack Developer • Next.js & Nest.js
                 </p>
-                <address className="text-muted-foreground text-lg leading-relaxed">
+                <address className="text-muted-foreground text-xs md:text-base lg:text-lg leading-relaxed not-italic">
                   Dhaka, Bangladesh
                 </address>
               </div>
@@ -218,7 +218,7 @@ const ContactFormSection = ({ className }: Props) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="p-8 md:p-12 rounded-[2rem] bg-card border border-border/50 shadow-2xl shadow-orange-500/5 basis-[55%]"
+            className="p-6 md:p-10 lg:p-12 rounded-[2rem] bg-card border border-border/50 shadow-2xl shadow-orange-500/5 basis-[55%]"
           >
             <form className="space-y-6">
               <div className="flex flex-col gap-3 text-left">
@@ -275,7 +275,7 @@ const ContactFormSection = ({ className }: Props) => {
                     }
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border appearance-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none transition-all cursor-pointer text-foreground"
                   >
-                    <option value="" disabled selected>
+                    <option value="" disabled>
                       Select a subject
                     </option>
                     <option value="website">Website Development</option>
@@ -317,7 +317,7 @@ const ContactFormSection = ({ className }: Props) => {
                     id="referral"
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border appearance-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none transition-all cursor-pointer text-foreground"
                   >
-                    <option value="" disabled selected>
+                    <option value="" disabled>
                       Select an option
                     </option>
                     <option value="google">Google search</option>
@@ -381,7 +381,7 @@ const ContactFormSection = ({ className }: Props) => {
                 </label>
               </div>
 
-              <Button className="w-full h-14 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-lg font-bold shadow-xl shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-95">
+              <Button className="w-full h-12 md:h-14 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-base md:text-lg font-bold shadow-xl shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-95">
                 Send message
                 <Send size={18} className="ml-2" />
               </Button>

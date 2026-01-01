@@ -36,11 +36,11 @@ const HomePage = () => {
       <SkillSection className="py-20 md:py-32 bg-card" />
       <FeaturedProject className="py-20 md:py-32" />
       <ProblemSection className="py-20 md:py-32 bg-card" />
-      <ServicesSection />
+      <ServicesSection className="py-20 md:py-32" />
       <HomeExperienceSection className="py-20 md:py-32 bg-card" />
       <ServicesCTASection className="py-20 md:py-32" />
       <FAQSection faqs={faqData} className="py-20 md:py-32 bg-card" />
-      <ContactFormSection className="py-20 md:py-32" />
+      <ContactFormSection className="pt-20 md:pt-32" />
     </>
   );
 };

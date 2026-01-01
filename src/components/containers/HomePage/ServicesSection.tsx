@@ -9,6 +9,7 @@ import {
 import SectionHeader from "../Shared/SectionHeader";
 import Link from "next/link";
 import { Briefcase, Users, CheckCircle, Globe } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const services = [
   {
@@ -55,12 +56,9 @@ const services = [
   },
 ];
 
-const ServicesSection = () => {
+const ServicesSection = ({ className }: { className?: string }) => {
   return (
-    <section className="py-20 md:py-32 bg-background relative">
-      {/* Background Decoration */}
-      <div className="absolute top-1/2 left-0 w-full h-150 bg-linear-to-b from-orange-500/5 to-transparent -z-10 pointer-events-none" />
-
+    <section className={cn("", className)}>
       <div className="container">
         <SectionHeader
           name="Expertise"
@@ -68,21 +66,21 @@ const ServicesSection = () => {
           description="I focus on building scalable, performance-driven Next.js applications — not generic websites."
         />
 
-        <div className="mt-16 grid lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="mt-12 md:mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative flex flex-col p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border/40 hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300"
+              className="group relative flex flex-col p-6 md:p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border/40 hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300"
             >
-              <div className="mb-8 w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-sm">
-                <service.icon className="size-7" />
+              <div className="mb-6 md:mb-8 w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 shadow-sm">
+                <service.icon className="size-6 md:size-7" />
               </div>
 
-              <h3 className="text-2xl font-bold mb-4 font-serif text-foreground">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 font-serif text-foreground">
                 {service.title}
               </h3>
 
-              <p className="text-muted-foreground mb-8 leading-relaxed h-20">
+              <p className="text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 {service.description}
               </p>
 
@@ -101,7 +99,7 @@ const ServicesSection = () => {
               <div className="mt-auto pt-6 border-t border-border/50">
                 <Link
                   href={service.href}
-                  className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-orange-600 group-hover:text-foreground transition-colors"
+                  className="inline-flex items-center gap-2 text-xs md:text-sm font-medium uppercase tracking-wider text-orange-600 group-hover:text-foreground transition-colors"
                 >
                   {service.cta}{" "}
                   <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
@@ -110,12 +108,12 @@ const ServicesSection = () => {
             </div>
           ))}
 
-          <div className="col-span-3 group relative flex flex-col p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border/40 hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300">
+          <div className="col-span-1 md:col-span-2 lg:col-span-3 group relative flex flex-col p-6 md:p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border/40 hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300">
             <div className="p-4 bg-orange-500/10 w-fit rounded-xl text-orange-600 mb-6 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
               <Settings className="size-6" />
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 font-serif text-foreground">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 font-serif text-foreground">
               More Capabilities
             </h3>
 
@@ -162,14 +160,14 @@ const ServicesSection = () => {
         ].map((stat, index) => (
           <div
             key={index}
-            className="p-6 rounded-3xl border border-border/40 bg-card/50 backdrop-blur-sm hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300 group"
+            className="p-4 md:p-6 rounded-3xl border border-border/40 bg-card/50 backdrop-blur-sm hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300 group"
           >
-            <div className="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-500 mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-              <stat.icon size={24} />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-500 mb-4 md:mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+              <stat.icon size={20} className="md:size-6" />
             </div>
-            <h3 className="text-3xl font-bold text-foreground mb-1">
+            <h3 className="text-xl md:text-3xl font-bold text-foreground mb-1">
               {stat.value}{" "}
-              <span className="text-base font-normal text-muted-foreground">
+              <span className="text-sm md:text-base font-normal text-muted-foreground">
                 {stat.unit}
               </span>
             </h3>

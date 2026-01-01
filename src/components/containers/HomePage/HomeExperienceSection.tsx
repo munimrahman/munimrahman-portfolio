@@ -42,16 +42,26 @@ const HomeExperienceSection = ({ className }: { className?: string }) => {
           {experiences.map((item) => (
             <div
               key={item.id}
-              className="group flex flex-col md:grid md:grid-cols-3 items-center py-8 border-b border-border border-dashed transition-colors hover:bg-muted/30"
+              className="group flex justify-between items-end md:grid md:grid-cols-3 md:items-center py-4 md:py-10 border-b border-border border-dashed transition-all hover:bg-muted/50 px-4 md:px-0"
             >
-              <div className="w-full md:text-left text-center font-medium text-foreground/80 md:pl-4">
+              {/* Year - Right on mobile, Left on desktop */}
+              <div className="order-2 md:order-1 font-medium text-orange-600 dark:text-orange-400 text-xs md:text-base md:text-foreground/80 md:pl-4 text-right md:text-left">
                 {item.years}
               </div>
-              <div className="w-full text-center font-semibold text-lg text-foreground">
-                {item.title}
-              </div>
-              <div className="w-full md:text-right text-center font-semibold text-foreground md:pr-4">
-                {item.company}
+
+              {/* Title & Company Group - Left on mobile, Grid items on desktop */}
+              <div className="order-1 md:contents">
+                {/* Primary Info (Company on Mobile, Title on Desktop) */}
+                <div className="md:order-2 md:text-center text-left font-bold md:font-semibold text-lg text-foreground mb-1 md:mb-0">
+                  <span className="md:hidden">{item.company}</span>
+                  <span className="max-md:hidden">{item.title}</span>
+                </div>
+
+                {/* Secondary Info (Title on Mobile, Company on Desktop) */}
+                <div className="md:order-3 md:text-right text-left text-sm md:text-base font-medium md:font-semibold text-muted-foreground md:text-foreground md:pr-4">
+                  <span className="md:hidden">{item.title}</span>
+                  <span className="max-md:hidden">{item.company}</span>
+                </div>
               </div>
             </div>
           ))}

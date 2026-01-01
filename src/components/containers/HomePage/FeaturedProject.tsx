@@ -16,7 +16,8 @@ const caseStudies: CaseStudyCardProps[] = [
     engagement: "Fast",
     userSatisfaction: "5.0",
     image: "/web-1.avif",
-    cardBackground: "#ffedd5", // Orange-100
+    lightBg: "#ffedd5", // Orange-100
+    darkBg: "#1c1917", // Stone-900 (Warm dark)
   },
   {
     title: "Enterprise SEO Platform",
@@ -25,7 +26,8 @@ const caseStudies: CaseStudyCardProps[] = [
     engagement: "SEO",
     userSatisfaction: "4.9",
     image: "/web-2.avif",
-    cardBackground: "#f3f4f6", // Gray-100
+    lightBg: "#f3f4f6", // Gray-100
+    darkBg: "#18181b", // Zinc-950
   },
   {
     title: "E-commerce MVP",
@@ -34,7 +36,8 @@ const caseStudies: CaseStudyCardProps[] = [
     engagement: "MVP",
     userSatisfaction: "4.8",
     image: "/web-3.avif",
-    cardBackground: "#fee2e2", // Red-100
+    lightBg: "#fee2e2", // Red-100
+    darkBg: "#1c1917", // Stone-900
   },
   {
     title: "Marketing Site Rebrand",
@@ -43,7 +46,8 @@ const caseStudies: CaseStudyCardProps[] = [
     engagement: "Rebrand",
     userSatisfaction: "5.0",
     image: "/web-4.avif",
-    cardBackground: "#e0f2fe", // Sky-100
+    lightBg: "#e0f2fe", // Sky-100
+    darkBg: "#0f172a", // Slate-900
   },
 ];
 
@@ -71,14 +75,14 @@ const StickyCard_001 = ({
   return (
     <div
       ref={container}
-      className="sticky top-28 flex items-center justify-center"
+      className="sticky top-20 md:top-28 flex items-center justify-center"
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 30 + 120}px)`,
+          top: `calc(-5vh + ${i * 20 + 40}px)`,
         }}
-        className="rounded-4xl relative -top-1/4 flex origin-top flex-col overflow-hidden"
+        className="rounded-4xl relative flex origin-top flex-col overflow-hidden"
       >
         {/* <img src={src} alt={title} className="h-full w-full object-cover" /> */}
         <CaseStudyCard
@@ -88,7 +92,8 @@ const StickyCard_001 = ({
           engagement={caseStudy.engagement}
           userSatisfaction={caseStudy.userSatisfaction}
           image={caseStudy.image}
-          cardBackground={caseStudy.cardBackground}
+          lightBg={caseStudy.lightBg}
+          darkBg={caseStudy.darkBg}
         />
       </motion.div>
     </div>
@@ -106,7 +111,7 @@ const FeaturedProject = ({ className }: Props) => {
 
   return (
     <ReactLenis root>
-      <section className={cn("relative", className)}>
+      <section className={cn("relative container", className)}>
         <div
           ref={container}
           className={cn(
@@ -117,7 +122,7 @@ const FeaturedProject = ({ className }: Props) => {
             name="Featured Projects"
             title="Real-World Experience"
             description="Not Just Demos. Production-ready applications."
-            className="mb-4"
+            className=""
           />
           {caseStudies.map((project, i) => {
             const targetScale = Math.max(

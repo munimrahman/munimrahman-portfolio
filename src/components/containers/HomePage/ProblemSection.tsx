@@ -70,7 +70,7 @@ const ProblemSection = ({ className }: Props) => {
             <div
               key={index}
               className={cn(
-                "p-10 flex flex-col items-center text-center border-orange-200/50",
+                "p-4 md:p-10 flex flex-col items-center text-center border-orange-200/50",
 
                 // Desktop (3 cols): Right border for 1,2, 4,5. Bottom border for 1,2,3
                 "lg:border-r lg:border-dashed",
@@ -92,7 +92,7 @@ const ProblemSection = ({ className }: Props) => {
                 <item.icon className="size-6" />
               </div>
 
-              <h3 className="text-xl font-bold mb-4 text-foreground">
+              <h3 className="text-lg md:text-xl font-bold mb-4 text-foreground">
                 {item.title}
               </h3>
 

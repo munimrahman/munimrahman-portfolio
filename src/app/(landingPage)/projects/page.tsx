@@ -1,11 +1,12 @@
 "use client";
 
-import PageHero from "@/components/containers/Shared/PageHero";
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import PageHero from "@/components/containers/Shared/PageHero";
 import ProjectCard from "@/components/ProjectCard";
 import { Project } from "@/types/project";
 
-const filter = [
+const filterOptions = [
   { id: 1, name: "All" },
   { id: 2, name: "Projects" },
   { id: 3, name: "Case Studies" },
@@ -17,15 +18,20 @@ const dummyProjects: Project[] = [
     title: "Modern Portfolio",
     description:
       "A high-performance personal portfolio built with Next.js 15, Tailwind CSS, and Framer Motion for smooth animations and a premium feel.",
-    image:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/mock.webp",
     techStack: [
       { name: "Next.js", icon: "Zap" },
       { name: "Tailwind", icon: "Palette" },
       { name: "Motion", icon: "Activity" },
+      { name: "React", icon: "Layers" },
+      { name: "Node.js", icon: "Server" },
+      { name: "Stripe", icon: "CreditCard" },
+      { name: "TypeScript", icon: "Code" },
+      { name: "Prisma", icon: "Database" },
+      { name: "PostgreSQL", icon: "Table" },
     ],
-    githubUrl: "#",
-    liveUrl: "#",
+    githubUrl: "",
+    liveUrl: "",
     category: "Projects",
   },
   {
@@ -40,9 +46,9 @@ const dummyProjects: Project[] = [
       { name: "Node.js", icon: "Server" },
       { name: "Stripe", icon: "CreditCard" },
     ],
-    githubUrl: "#",
+    githubUrl: "",
     liveUrl: "#",
-    category: "Projects",
+    category: "Case Studies",
   },
   {
     id: 3,
@@ -57,7 +63,7 @@ const dummyProjects: Project[] = [
       { name: "PostgreSQL", icon: "Table" },
     ],
     githubUrl: "#",
-    liveUrl: "#",
+    liveUrl: "",
     category: "Projects",
   },
   {
@@ -90,22 +96,17 @@ const dummyProjects: Project[] = [
     ],
     githubUrl: "#",
     liveUrl: "#",
-    category: "Projects",
+    category: "Case Studies",
   },
 ];
 
 const ProjectsPage = () => {
-  const [selectedFilter, setSelectedFilter] = useState<number | null>(1);
+  const [selectedFilter, setSelectedFilter] = useState<number>(1);
 
-  const handleFilterChange = (filterId: number | null) => {
-    if (filterId === selectedFilter) return;
+  const handleTabClick = (filterId: number) => {
     setSelectedFilter(filterId);
-  };
-
-  const handleTabClick = (filterId: number | null) => {
-    handleFilterChange(filterId);
     // Scroll the clicked tab into view
-    const element = document.getElementById(`tab-${filterId ?? "all"}`);
+    const element = document.getElementById(`tab-${filterId}`);
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
@@ -120,7 +121,8 @@ const ProjectsPage = () => {
       ? dummyProjects
       : dummyProjects.filter(
           (p) =>
-            p.category === filter.find((f) => f.id === selectedFilter)?.name
+            p.category ===
+            filterOptions.find((f) => f.id === selectedFilter)?.name
         );
 
   return (
@@ -134,13 +136,13 @@ const ProjectsPage = () => {
 
       {/* Tabs */}
       <div className="container flex justify-center py-8 flex-nowrap lg:flex-wrap overflow-x-auto gap-3 w-full lg:w-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        {filter.map((item) => (
+        {filterOptions.map((item) => (
           <div key={item.id} id={`tab-${item.id}`} className="shrink-0">
             <button
-              className={`text-sm lg:text-base border-2 rounded-xl px-6 py-2.5 cursor-pointer transition-all duration-300 whitespace-nowrap font-medium ${
+              className={`text-sm lg:text-base border rounded-md px-6 py-2 cursor-pointer transition-all duration-300 whitespace-nowrap font-medium ${
                 item.id === selectedFilter
                   ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20"
-                  : "bg-white text-foreground border-border hover:border-orange-300"
+                  : "bg-card text-primary/80 border-border hover:border-border hover:text-primary/80"
               }`}
               onClick={() => handleTabClick(item.id)}
             >
@@ -151,12 +153,31 @@ const ProjectsPage = () => {
       </div>
 
       {/* Project list */}
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+      <div className="container pb-20">
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 relative"
+        >
+          <AnimatePresence mode="popLayout" initial={false}>
+            {filteredProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{
+                  duration: 0.4,
+                  ease: "easeInOut",
+                  layout: { duration: 0.4 },
+                }}
+                className="h-full"
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </div>
   );

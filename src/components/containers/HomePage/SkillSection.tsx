@@ -26,7 +26,7 @@ const SkillSection = ({ className }: Props) => {
             <div key={skill.id}>
               <Tooltip>
                 <TooltipTrigger>
-                  <div className="p-4 bg-background rounded-lg h-32 w-32 flex items-center justify-center">
+                  <div className="p-2 md:p-4 bg-background rounded-lg h-16 md:h-28 w-16 md:w-28 flex items-center justify-center">
                     {skill.icon}
                   </div>
                 </TooltipTrigger>
