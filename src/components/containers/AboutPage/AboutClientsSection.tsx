@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ComponentProps } from "@/types";
+import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 import { Building2, Rocket, Users2, Check } from "lucide-react";
 
@@ -20,7 +20,7 @@ const clientTypes = [
   },
 ];
 
-const AboutClientsSection = ({ className }: ComponentProps) => {
+const AboutClientsSection = ({ className }: ComponentProps<"section">) => {
   return (
     <section
       className={cn(
@@ -59,9 +59,9 @@ const AboutClientsSection = ({ className }: ComponentProps) => {
               , we’ll be a great fit.
             </p>
 
-            <div className="p-6 bg-orange-50 dark:bg-orange-950/20 rounded-2xl border border-orange-100 dark:border-orange-900/50">
+            <div className="p-6 bg-orange-50 dark:bg-orange-950/20 rounded-lg md:rounded-xl border border-orange-100 dark:border-orange-900/50">
               <p className="text-orange-800 dark:text-orange-200 font-medium italic">
-                &quot;If you’re looking for a quick, throwaway website — I’m
+                &quot;If you’re looking for a quick, throwaway website - I’m
                 probably not the right choice.&quot;
               </p>
             </div>
@@ -78,7 +78,7 @@ const AboutClientsSection = ({ className }: ComponentProps) => {
             {clientTypes.map((client) => (
               <div
                 key={client.title}
-                className="flex items-center gap-6 p-6 rounded-2xl border border-border/40 bg-background hover:border-orange-500/30 transition-all duration-300 group"
+                className="flex items-center gap-6 p-6 rounded-lg md:rounded-xl border border-border/40 bg-background hover:border-orange-500/30 transition-all duration-300 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-muted-foreground group-hover:text-orange-600 transition-colors">
                   <client.icon size={24} />

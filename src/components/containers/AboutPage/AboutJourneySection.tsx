@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Zap, Search, Layers } from "lucide-react";
-import { ComponentProps } from "@/types";
+import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
-const AboutJourneySection = ({ className }: ComponentProps) => {
+const AboutJourneySection = ({ className }: ComponentProps<"section">) => {
   return (
     <section className={cn("relative overflow-hidden", className)}>
       <div className="container relative z-10">

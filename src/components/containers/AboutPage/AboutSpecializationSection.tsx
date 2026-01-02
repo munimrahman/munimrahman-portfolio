@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ComponentProps } from "@/types";
+import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 import { Layout, Globe, Server, Gauge } from "lucide-react";
 import SectionHeader from "../Shared/SectionHeader";
@@ -33,12 +33,11 @@ const specializations = [
   },
 ];
 
-const AboutSpecializationSection = ({ className }: ComponentProps) => {
+const AboutSpecializationSection = ({
+  className,
+}: ComponentProps<"section">) => {
   return (
     <section className={cn("py-24 bg-card relative", className)}>
-      {/* Decorative background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(#fb923c_1px,transparent_1px)] bg-size-[20px_20px] opacity-[0.03] pointer-events-none" />
-
       <div className="container relative z-10">
         <SectionHeader
           name="Specialization"
@@ -54,12 +53,12 @@ const AboutSpecializationSection = ({ className }: ComponentProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group p-8 rounded-3xl border border-border/50 bg-background/50 backdrop-blur-sm hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300"
+              className="group p-8 rounded-lg md:rounded-xl border border-border/50 bg-background/50 backdrop-blur-sm hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-2xl bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+              <div className="mb-6 md:mb-8 w-12 h-12 md:w-14 md:h-14 rounded-md md:rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-all duration-300 shadow-sm">
                 <item.icon size={28} />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-orange-600 transition-colors">
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-orange-500 transition-colors">
                 {item.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

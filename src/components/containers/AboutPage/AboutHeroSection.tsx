@@ -16,7 +16,7 @@ const AboutHeroSection = () => {
     <section className="container min-h-screen -mt-4 md:-mt-10 flex flex-col items-center justify-center py-12 md:py-16 relative overflow-hidden md:overflow-visible">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-10 lg:gap-x-20 items-center w-full z-10">
         {/* Block 1: Intro (Label + Heading) */}
-        <div className="lg:col-span-3 space-y-6 md:space-y-8 animate-in slide-in-from-left-5 duration-700 fade-in">
+        <div className="lg:col-span-3 space-y-6 md:space-y-8 animate-in slide-in-from-left-5 duration-700 fade-in fill-mode-both">
           {/* Label */}
           <div className="flex items-center gap-3 md:gap-4">
             <span className="h-0.5 w-8 md:w-12 bg-orange-500/50 rounded-full"></span>
@@ -34,7 +34,7 @@ const AboutHeroSection = () => {
         </div>
 
         {/* Block 2: Image Section (Responsive Positioning) */}
-        <div className="lg:col-span-2 lg:row-span-2 lg:col-start-4 relative flex justify-center lg:justify-end animate-in fade-in duration-1000 delay-200">
+        <div className="lg:col-span-2 lg:row-span-2 lg:col-start-4 relative flex justify-center lg:justify-end animate-in fade-in duration-1000 delay-200 fill-mode-both">
           {/* Decorative Glows */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-orange-500/5 blur-[80px] md:blur-[100px] rounded-full -z-10 pointer-events-none"></div>
 
@@ -60,7 +60,7 @@ const AboutHeroSection = () => {
         </div>
 
         {/* Block 3: Details (Description + CTA + Socials) */}
-        <div className="lg:col-span-3 space-y-6 md:space-y-8 animate-in slide-in-from-left-5 duration-700 fade-in delay-100">
+        <div className="lg:col-span-3 space-y-6 md:space-y-8 animate-in slide-in-from-left-5 duration-700 fade-in delay-100 fill-mode-both">
           {/* Description */}
           <div className="space-y-4 md:space-y-6 text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed font-light w-full">
             <p>

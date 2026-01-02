@@ -4,10 +4,12 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ComponentProps } from "react";
 
-interface ButtonSecondaryProps extends ComponentProps<"button"> {
-  children: React.ReactNode;
-  href?: string;
-}
+type ButtonSecondaryProps = ComponentProps<"button"> &
+  ComponentProps<"a"> & {
+    children: React.ReactNode;
+    href?: string;
+    className?: string;
+  };
 
 const ButtonSecondary = ({
   children,
@@ -22,7 +24,7 @@ const ButtonSecondary = ({
 
   if (href) {
     return (
-      <Link href={href} className={styles}>
+      <Link href={href} className={styles} {...props}>
         {children}
       </Link>
     );

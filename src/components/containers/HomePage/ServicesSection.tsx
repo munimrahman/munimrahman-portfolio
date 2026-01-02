@@ -58,7 +58,7 @@ const services = [
 
 const ServicesSection = ({ className }: { className?: string }) => {
   return (
-    <section className={cn("", className)}>
+    <section id="services" className={cn("", className)}>
       <div className="container">
         <SectionHeader
           name="Expertise"

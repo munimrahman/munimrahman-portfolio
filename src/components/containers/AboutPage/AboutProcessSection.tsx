@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ComponentProps } from "@/types";
+import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 import { Lightbulb, Workflow, Zap, Rocket } from "lucide-react";
 import SectionHeader from "../Shared/SectionHeader";
@@ -33,7 +33,7 @@ const processSteps = [
   },
 ];
 
-const AboutProcessSection = ({ className }: ComponentProps) => {
+const AboutProcessSection = ({ className }: ComponentProps<"section">) => {
   return (
     <section className={cn("py-24 relative overflow-hidden", className)}>
       {/* Background Blur */}
@@ -63,20 +63,20 @@ const AboutProcessSection = ({ className }: ComponentProps) => {
                 </div>
               )}
 
-              <div className="relative z-10 flex flex-col items-center text-center h-full p-6 rounded-3xl bg-card border border-border/50 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 group-hover:-translate-y-2">
+              <div className="relative z-10 flex flex-col items-center text-center h-full p-6 rounded-lg md:rounded-xl bg-card border border-border/50 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 group-hover:-translate-y-2">
                 {/* Number Badge */}
                 <span className="absolute top-4 right-4 text-xs font-bold font-mono text-orange-200 dark:text-orange-900 group-hover:text-orange-500 transition-colors">
                   {step.id}
                 </span>
 
-                <div className="w-16 h-16 rounded-2xl bg-orange-50 dark:bg-stone-900 flex items-center justify-center text-orange-500 mb-6 shadow-sm border border-orange-100 dark:border-orange-900 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-md md:rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 mb-4 md:mb-6 group-hover:scale-110 transition-all duration-300">
                   <step.icon size={30} strokeWidth={1.5} />
                 </div>
 
                 <h3 className="text-xl font-bold text-foreground mb-3">
                   {step.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
               </div>

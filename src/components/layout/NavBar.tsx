@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -57,21 +56,40 @@ const NavBar = () => {
 
   return (
     <nav className="fixed top-4 left-0 right-0 z-50 px-4">
-      <div className="container p-2 md:p-4 rounded-lg relative">
+      <div className="container px-3 py-2 md:px-4 md:py-3 rounded-lg relative">
         <div className="absolute inset-0 bg-accent/20 dark:bg-accent/10 backdrop-blur-lg rounded-lg -z-10" />
 
         <div className="flex justify-between items-center relative">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/logo.svg"
-              alt="Logo"
-              width={40}
-              height={40}
-              className="w-10 h-10"
-            />
-            <Link href="/">
-              <h1 className="text-2xl font-semibold">munim</h1>
-            </Link>
+          <div className="flex items-center gap-3">
+            {/* <figure className="rounded-full overflow-hidden border border-orange-100 dark:border-orange-500/20 shrink-0">
+              <Image
+                src="/demo-pp.jpg"
+                alt="Munim Rahman Avatar"
+                width={48}
+                height={48}
+                className="w-11 h-11 md:w-12 md:h-12 object-cover"
+              />
+              <figcaption className="sr-only">Munim Rahman Avatar</figcaption>
+            </figure> */}
+            <div className="flex flex-col gap-0.5">
+              <Link href="/" className="group flex items-center gap-1">
+                <span className="text-xl md:text-2xl filter drop-shadow-sm -ml-1">
+                  ✌️
+                </span>
+                <h1 className="text-xl md:text-2xl font-bold text-orange-600 dark:text-orange-500 tracking-tight leading-none">
+                  munim
+                </h1>
+              </Link>
+              <div className="flex items-center gap-2 px-0.5">
+                <div className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </div>
+                <span className="text-[10px] md:text-xs text-muted-foreground/80 tracking-wide">
+                  Available for Work
+                </span>
+              </div>
+            </div>
           </div>
 
           <div className="relative">

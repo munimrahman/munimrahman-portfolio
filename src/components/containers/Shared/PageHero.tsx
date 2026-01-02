@@ -1,9 +1,9 @@
 "use client";
 
-import { ComponentProps } from "@/types";
+import { ComponentProps } from "react";
 import { motion } from "motion/react";
 
-interface Props extends ComponentProps {
+interface Props extends ComponentProps<"section"> {
   title: string;
   heading: string;
   headingWithColor: string;

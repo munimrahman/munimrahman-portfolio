@@ -1,70 +1,133 @@
 import Link from "next/link";
-import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Twitter, Linkedin, Github, MapPin, ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="container relative mt-32 mb-8 z-40">
-      <div className="relative overflow-hidden rounded-3xl bg-[#FFF4E6] dark:bg-card border border-orange-200/60 dark:border-border/40 px-6 py-20 text-foreground transition-colors duration-300 shadow-xl shadow-orange-500/5 dark:shadow-none">
-        {/* Warm glow */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-orange-500/10 dark:bg-accent/20 blur-3xl"></div>
-        </div>
-
-        <div className="relative mx-auto max-w-6xl">
-          {/* Top */}
-          <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
-            {/* Left */}
-            <div className="flex flex-col gap-2">
-              <p className="text-sm text-muted-foreground">Let&apos;s</p>
-
-              <h2 className="font-lustria text-4xl md:text-5xl text-foreground">
-                Get in <span className="italic text-primary/90">touch</span>
-              </h2>
-
-              <a
-                href="mailto:hello@munimrahman.com"
-                className="mt-6 inline-block w-fit border-b border-orange-300 dark:border-border pb-1 text-lg text-muted-foreground hover:text-foreground transition hover:border-primary"
-              >
-                hello@munimrahman.com
-              </a>
-            </div>
-
-            {/* Social icons */}
-            <div className="flex items-center gap-4">
-              {[
-                { icon: Twitter, href: "#" },
-                { icon: Facebook, href: "#" },
-                { icon: Instagram, href: "#" },
-                { icon: Linkedin, href: "#" },
-              ].map((social, index) => (
-                <Link
-                  key={index}
-                  href={social.href}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-orange-200 dark:border-border text-muted-foreground transition hover:border-primary/60 hover:bg-white/80 dark:hover:bg-accent hover:text-primary bg-white/40 dark:bg-background/20"
-                >
-                  <social.icon size={18} />
-                </Link>
-              ))}
-            </div>
+    <footer className="w-full relative mt-16 md:mt-32 pb-12 px-4 md:px-0">
+      <div className="container">
+        {/* Main Footer Card */}
+        <div className="relative overflow-hidden rounded-2xl md:rounded-3xl bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-orange-200/40 dark:border-border/40 px-6 md:px-10 py-8 md:py-12 transition-all duration-500 shadow-2xl shadow-orange-950/3 dark:shadow-none">
+          {/* Subtle Background Elements */}
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            <div className="absolute -right-24 -bottom-24 h-96 w-96 rounded-full bg-orange-100/30 dark:bg-primary/5 blur-[100px]"></div>
+            <div className="absolute -left-24 -top-24 h-96 w-96 rounded-full bg-orange-50/50 dark:bg-accent/5 blur-[100px]"></div>
           </div>
 
-          {/* Divider */}
-          <div className="my-12 h-px w-full bg-orange-200 dark:bg-border/50"></div>
+          <div className="relative z-10">
+            {/* Middle Section: Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+              {/* Brand & Socials */}
+              <div className="md:col-span-5 space-y-8">
+                <div className="space-y-4">
+                  <Link
+                    href="/"
+                    className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-orange-500 tracking-tight leading-none"
+                  >
+                    Munim Rahman
+                  </Link>
+                  <p className="text-base md:text-lg text-muted-foreground/80 max-w-sm leading-relaxed font-light mt-3 md:mt-6">
+                    Experienced Full-Stack Developer specializing in crafting
+                    high-performance, aesthetically pleasing digital
+                    experiences.
+                  </p>
+                </div>
 
-          {/* Bottom */}
-          <div className="flex flex-col gap-4 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
-            <p>Powered by — Next.js</p>
+                {/* Social Icons */}
+                <div className="flex items-center gap-8">
+                  <Link
+                    href="#"
+                    className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
+                  >
+                    <Github className="w-4 h-4 md:w-5 md:h-5" />
+                  </Link>
+                  <Link
+                    href="#"
+                    className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
+                  >
+                    <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
+                  </Link>
+                  <Link
+                    href="#"
+                    className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
+                  >
+                    <Twitter className="w-4 h-4 md:w-5 md:h-5" />
+                  </Link>
+                </div>
+              </div>
 
-            <div className="flex gap-6">
-              <Link href="#" className="transition hover:text-foreground">
-                Style Guide
-              </Link>
-              <Link href="#" className="transition hover:text-foreground">
-                Licenses
-              </Link>
-              <Link href="#" className="transition hover:text-foreground">
-                Changelog
-              </Link>
+              {/* Quick Navigation */}
+              <div className="md:col-span-3">
+                <h3 className="text-xs font-bold tracking-[0.25em] text-foreground/40 uppercase mb-8">
+                  Sitemap
+                </h3>
+                <ul className="flex flex-col gap-4">
+                  {["Home", "About", "Work", "Skills", "Contact"].map(
+                    (item) => (
+                      <li key={item}>
+                        <Link
+                          href={
+                            item === "Home" ? "/" : `/${item.toLowerCase()}`
+                          }
+                          className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 font-light"
+                        >
+                          <span className="w-0 group-hover:w-4 h-[1px] bg-primary transition-all duration-300 overflow-hidden opacity-0 group-hover:opacity-100"></span>
+                          {item}
+                        </Link>
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+
+              {/* Contact Info */}
+              <div className="md:col-span-4">
+                <h3 className="text-xs font-bold tracking-[0.25em] text-foreground/40 uppercase mb-8">
+                  Say Hello
+                </h3>
+                <div className="space-y-6">
+                  <a
+                    href="mailto:hello@munimrahman.com"
+                    className="group flex flex-col gap-1 w-fit"
+                  >
+                    <span className="text-sm text-muted-foreground/60 transition-colors group-hover:text-primary/60 font-medium">
+                      Email Me
+                    </span>
+                    <span className="text-xl md:text-2xl text-foreground font-light border-b border-orange-200/50 dark:border-border/30 pb-1 group-hover:border-primary transition-all flex items-center gap-2">
+                      hello@munimrahman.com
+                      <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-primary" />
+                    </span>
+                  </a>
+
+                  <div className="flex flex-col gap-1">
+                    <span className="text-sm text-muted-foreground/60 font-medium">
+                      Location
+                    </span>
+                    <div className="flex items-center gap-2 text-foreground font-light">
+                      <MapPin className="w-4 h-4 text-primary/60" />
+                      <span className="text-xl">Dhaka, Bangladesh</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="mt-6 md:mt-12 pt-4 md:pt-8 border-t border-orange-200/20 dark:border-border/10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground/50 tracking-wide">
+              <p>
+                &copy; {new Date().getFullYear()} Munim Rahman. Product of
+                Passion.
+              </p>
+
+              <div className="flex items-center gap-8">
+                <div className="flex items-center gap-2 group cursor-default">
+                  <span className="w-8 h-[1px] bg-orange-200/50 dark:bg-border/30 group-hover:bg-primary transition-colors"></span>
+                  <span>Crafted with Precision</span>
+                </div>
+                <div className="flex items-center gap-2 group cursor-default">
+                  <span className="w-8 h-[1px] bg-orange-200/50 dark:bg-border/30 group-hover:bg-primary transition-colors"></span>
+                  <span>Built with Next.js</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
