@@ -13,8 +13,7 @@ const caseStudies: CaseStudyCardProps[] = [
     title: "SaaS Admin Dashboard",
     description:
       "A high-performance admin dashboard with role-based access control, real-time data visualization, and seamless API integrations.",
-    engagement: "Fast",
-    userSatisfaction: "5.0",
+    tags: ["React", "Tailwind CSS", "Recharts", "API Integration"],
     image: "/web-1.avif",
     lightBg: "#ffedd5", // Orange-100
     darkBg: "#1c1917", // Stone-900 (Warm dark)
@@ -23,8 +22,7 @@ const caseStudies: CaseStudyCardProps[] = [
     title: "Enterprise SEO Platform",
     description:
       "Scalable architected Next.js site handling thousands of pages with perfect Core Web Vitals and programmatic SEO structure.",
-    engagement: "SEO",
-    userSatisfaction: "4.9",
+    tags: ["Next.js", "SEO", "TypeScript", "Core Web Vitals"],
     image: "/web-2.avif",
     lightBg: "#f3f4f6", // Gray-100
     darkBg: "#18181b", // Zinc-950
@@ -33,8 +31,7 @@ const caseStudies: CaseStudyCardProps[] = [
     title: "E-commerce MVP",
     description:
       "Rapidly developed MVP for a fashion startup, featuring custom checkout flow, inventory management, and fast mobile performance.",
-    engagement: "MVP",
-    userSatisfaction: "4.8",
+    tags: ["Shopify", "React", "Mobile-first", "Stripe"],
     image: "/web-3.avif",
     lightBg: "#fee2e2", // Red-100
     darkBg: "#1c1917", // Stone-900
@@ -43,8 +40,7 @@ const caseStudies: CaseStudyCardProps[] = [
     title: "Marketing Site Rebrand",
     description:
       "Complete overhaul of a legacy site to a modern, headless CMS powered Next.js application, resulting in 2x faster load times.",
-    engagement: "Rebrand",
-    userSatisfaction: "5.0",
+    tags: ["Next.js", "Headless CMS", "Framer Motion", "Tailwind CSS"],
     image: "/web-4.avif",
     lightBg: "#e0f2fe", // Sky-100
     darkBg: "#0f172a", // Slate-900
@@ -82,15 +78,14 @@ const StickyCard_001 = ({
           scale,
           top: `calc(-5vh + ${i * 20 + 40}px)`,
         }}
-        className="rounded-4xl relative flex origin-top flex-col overflow-hidden"
+        className="relative flex origin-top flex-col overflow-hidden"
       >
         {/* <img src={src} alt={title} className="h-full w-full object-cover" /> */}
         <CaseStudyCard
           key={i}
           title={caseStudy.title}
           description={caseStudy.description}
-          engagement={caseStudy.engagement}
-          userSatisfaction={caseStudy.userSatisfaction}
+          tags={caseStudy.tags}
           image={caseStudy.image}
           lightBg={caseStudy.lightBg}
           darkBg={caseStudy.darkBg}

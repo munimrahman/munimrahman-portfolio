@@ -70,7 +70,7 @@ const ProblemSection = ({ className }: Props) => {
             <div
               key={index}
               className={cn(
-                "p-4 md:p-10 flex flex-col items-center text-center border-orange-200/50",
+                "p-4 md:p-10 flex flex-col items-center text-center border-orange-200/50 group transition-all duration-300 hover:bg-orange-500/5",
 
                 // Desktop (3 cols): Right border for 1,2, 4,5. Bottom border for 1,2,3
                 "lg:border-r lg:border-dashed",
@@ -88,8 +88,8 @@ const ProblemSection = ({ className }: Props) => {
                 index === problems.length - 1 && "max-md:border-b-0"
               )}
             >
-              <div className="mb-6 p-3 rounded-xl bg-orange-50 text-orange-600">
-                <item.icon className="size-6" />
+              <div className="w-12 h-12 rounded-md md:rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 mb-6 group-hover:scale-110 transition-all duration-300">
+                <item.icon size={20} className="md:size-6" />
               </div>
 
               <h3 className="text-lg md:text-xl font-bold mb-4 text-foreground">

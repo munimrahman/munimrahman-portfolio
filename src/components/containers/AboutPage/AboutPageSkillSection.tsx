@@ -2,10 +2,10 @@
 
 import { skillData } from "@/assets/icons/techIcons";
 import { motion, Variants } from "motion/react";
-import { ComponentProps } from "@/types";
+import { ComponentProps } from "react";
 import SectionHeader from "../Shared/SectionHeader";
 
-interface Props extends ComponentProps {}
+interface Props extends ComponentProps<"section"> {}
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },

@@ -161,7 +161,7 @@
     @apply bg-background text-foreground;
   }
   p > a {
-    @apply underline text-orange-600 hover:opacity-90 transition-opacity;
+    @apply underline text-orange-500 hover:opacity-90 transition-opacity;
   }
 }
 

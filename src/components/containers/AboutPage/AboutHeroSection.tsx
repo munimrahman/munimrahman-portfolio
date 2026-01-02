@@ -144,7 +144,7 @@ const AboutHeroSection = () => {
             key={index}
             className="p-4 md:p-6 rounded-lg md:rounded-xl border border-border/40 bg-card/50 backdrop-blur-sm hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-300 group"
           >
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-md md:rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 mb-4 md:mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-md md:rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 mb-4 md:mb-6 group-hover:scale-110 transition-all duration-300">
               <stat.icon size={20} className="md:size-6" />
             </div>
             <h3 className="text-xl md:text-3xl font-bold text-foreground mb-1">

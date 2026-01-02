@@ -49,16 +49,18 @@ const FAQSection = ({ className, faqs }: Props) => {
                   //       <Plus className="text-muted-foreground pointer-events-none size-5 shrink-0 transition-all duration-200" />
                   //     )
                   //   }
-                  className={`lg:text-xl font-medium hover:no-underline cursor-pointer ${
+                  className={`lg:text-lg text-primary font-medium hover:no-underline cursor-pointer ${
                     ind !== 0
-                      ? "py-5 md:py-6 lg:py-[30px]"
-                      : "pb-5 md:pb-6 lg:pb-[30px]"
+                      ? "py-5 md:py-6 lg:py-7.5"
+                      : "pb-5 md:pb-6 lg:pb-7.5"
                   }`}
                 >
-                  {item?.question}
+                  <h3 className="text-lg text-foreground font-medium">
+                    {item?.question}
+                  </h3>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className="font-creato text-[clamp(14px,3.6vw,18px)]/[160%] font-normal mb-6">
+                  <p className="text-base text-muted-foreground font-normal mb-6">
                     {item?.answer}
                   </p>
                 </AccordionContent>
