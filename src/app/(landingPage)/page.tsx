@@ -7,7 +7,7 @@ import ServicesSection from "@/components/containers/HomePage/ServicesSection";
 import HomeExperienceSection from "@/components/containers/HomePage/HomeExperienceSection";
 import { FAQItem } from "@/types";
 import SkillSection from "@/components/containers/HomePage/SkillSection";
-import ContactFormSection from "@/components/containers/Shared/ContactFormSection";
+import { ContactFormSectionV2 } from "@/components/containers/Shared/ContactFormSection";
 import ServicesCTASection from "@/components/containers/Shared/SearviceCTASection";
 
 const faqData: FAQItem[] = [
@@ -33,14 +33,14 @@ const HomePage = () => {
   return (
     <>
       <HomeHeroSection />
-      <SkillSection className="py-20 md:py-32 bg-card" />
-      <FeaturedProject className="py-20 md:py-32" />
-      <ProblemSection className="py-20 md:py-32 bg-card" />
-      <ServicesSection className="py-20 md:py-32" />
-      <HomeExperienceSection className="py-20 md:py-32 bg-card" />
-      <ServicesCTASection className="py-20 md:py-32" />
-      <FAQSection faqs={faqData} className="py-20 md:py-32 bg-card" />
-      <ContactFormSection className="pt-20 md:pt-32" />
+      <SkillSection className="py-16 md:py-32 bg-card" />
+      <FeaturedProject className="py-16 md:py-32" />
+      <ProblemSection className="py-16 md:py-32 bg-card" />
+      <ServicesSection className="py-16 md:py-32" />
+      <HomeExperienceSection className="py-16 md:py-32 bg-card" />
+      <ServicesCTASection className="py-16 md:py-32" />
+      <FAQSection faqs={faqData} className="py-16 md:py-32 bg-card" />
+      <ContactFormSectionV2 className="pt-16 md:pt-32" />
     </>
   );
 };

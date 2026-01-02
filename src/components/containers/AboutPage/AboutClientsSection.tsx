@@ -22,7 +22,12 @@ const clientTypes = [
 
 const AboutClientsSection = ({ className }: ComponentProps) => {
   return (
-    <section className={cn("py-24 bg-card", className)}>
+    <section
+      className={cn(
+        "py-24 bg-card overflow-hidden md:overflow-visible",
+        className
+      )}
+    >
       <div className="container">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Left: Text Content */}

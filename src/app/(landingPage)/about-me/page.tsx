@@ -8,7 +8,7 @@ import AboutClientsSection from "@/components/containers/AboutPage/AboutClientsS
 import FAQSection from "@/components/containers/Shared/FAQSection";
 import { FAQItem } from "@/types";
 import ServicesCTASection from "@/components/containers/Shared/SearviceCTASection";
-import ContactFormSection from "@/components/containers/Shared/ContactFormSection";
+import { ContactFormSectionV2 } from "@/components/containers/Shared/ContactFormSection";
 
 const faqData: FAQItem[] = [
   {
@@ -68,16 +68,15 @@ const AboutMePage = () => {
 
       <AboutProcessSection className="bg-card" />
 
-      {/* need to be fixed */}
       <AboutPageExperienceSection className="py-32 bg-background" />
 
-      {/* <AboutClientsSection />
+      <AboutClientsSection />
 
       <FAQSection faqs={faqData} className="bg-background py-32" />
 
       <ServicesCTASection className="py-20 md:py-32 bg-card" />
 
-      <ContactFormSection className="py-20 md:py-32" /> */}
+      <ContactFormSectionV2 className="py-20 md:py-32" />
     </>
   );
 };

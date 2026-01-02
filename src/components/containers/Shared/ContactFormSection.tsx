@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { TelegramIcon, WhatsAppIcon } from "@/assets/icons";
 import { cn } from "@/lib/utils";
+import SectionHeader from "./SectionHeader";
 
 interface Props {
   className?: string;
@@ -52,7 +53,7 @@ const ContactFormSection = ({ className }: Props) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-between gap-8 basis-[45%]"
+            className="basis-[45%] order-2 lg:order-1 flex flex-col justify-between gap-8"
           >
             <div className="space-y-10 md:space-y-16">
               {/* Call Me */}
@@ -218,7 +219,7 @@ const ContactFormSection = ({ className }: Props) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="p-6 md:p-10 lg:p-12 rounded-[2rem] bg-card border border-border/50 shadow-2xl shadow-orange-500/5 basis-[55%]"
+            className="basis-[55%] order-1 lg:order-2 p-6 md:p-10 lg:p-12 rounded-[2rem] bg-card border border-border/50 shadow-2xl shadow-orange-500/5"
           >
             <form className="space-y-6">
               <div className="flex flex-col gap-3 text-left">
@@ -392,6 +393,15 @@ const ContactFormSection = ({ className }: Props) => {
           </motion.div>
         </div>
       </div>
+    </section>
+  );
+};
+
+export const ContactFormSectionV2 = ({ className }: Props) => {
+  return (
+    <section className={cn("", className)}>
+      <SectionHeader title="Get in Touch" name="Contact" description="" />
+      <ContactFormSection />
     </section>
   );
 };

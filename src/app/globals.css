@@ -168,7 +168,7 @@
 @layer utilities {
   .container {
     /* @apply mx-auto w-[90vw] sm:w-[85vw] max-w-335; */
-    @apply mx-auto w-[90vw] md:w-[85vw] max-w-7xl;
+    @apply w-[90vw] md:w-[85vw] max-w-7xl mx-auto;
   }
 
   .scrollbar::-webkit-scrollbar {

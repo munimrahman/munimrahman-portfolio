@@ -18,10 +18,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="group bg-card border border-border rounded-2xl overflow-hidden flex flex-col h-full hover:border-primary/50 transition-all duration-300 p-6 shadow-sm hover:shadow-md"
+      className="group bg-card border border-border rounded-2xl overflow-hidden flex flex-col h-full hover:border-primary/50 transition-all duration-300 p-4 sm:p-6 shadow-sm hover:shadow-md"
     >
       {/* Project Image */}
-      <div className="relative aspect-video rounded-xl overflow-hidden h-96">
+      <div className="relative aspect-video rounded-xl overflow-hidden h-52 sm:h-72 md:h-80 lg:h-96">
         <figure className="w-full h-full">
           <Image
             src={project.image}
@@ -34,10 +34,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col grow gap-6 pt-6">
+      <div className="flex flex-col grow gap-4 sm:gap-6 pt-5 sm:pt-6">
         <div className="space-y-3">
           <div className="flex items-center justify-between gap-4">
-            <h3 className="text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
               {project.title}
             </h3>
             {project.category === "Case Studies" && (
@@ -47,11 +47,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 aria-label="Case Study"
               >
                 <span>View Case Study</span>
-                <LucideIcons.ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                <LucideIcons.ArrowRight className="w-3.5 h-3.5 sm:w-4 h-4 transition-transform group-hover/link:translate-x-1" />
               </Link>
             )}
           </div>
-          <p className="text-muted-foreground line-clamp-2 text-base leading-relaxed">
+          <p className="text-muted-foreground line-clamp-2 text-sm sm:text-base leading-relaxed">
             {project.description}
           </p>
         </div>
@@ -67,9 +67,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               return (
                 <div
                   key={index}
-                  className="flex items-center gap-1.5 bg-muted border border-border px-3 py-1.5 rounded-lg text-xs font-medium text-foreground/80"
+                  className="flex items-center gap-1.5 bg-muted border border-border px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-[10px] sm:text-xs font-medium text-foreground/80"
                 >
-                  {tech.icon && <Icon className="w-3.5 h-3.5 text-primary" />}
+                  {tech.icon && (
+                    <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
+                  )}
                   <span>{tech.name}</span>
                 </div>
               );
@@ -83,10 +85,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 border border-border"
+                className="p-2 sm:p-2.5 rounded-xl bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 border border-border"
                 aria-label="GitHub Repository"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-4 h-4 sm:w-5 h-5" />
               </a>
             )}
             {project.liveUrl && (
@@ -94,10 +96,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 border border-border"
+                className="p-2 sm:p-2.5 rounded-xl bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 border border-border"
                 aria-label="Live Demo"
               >
-                <ExternalLink className="w-5 h-5" />
+                <ExternalLink className="w-4 h-4 sm:w-5 h-5" />
               </a>
             )}
           </div>

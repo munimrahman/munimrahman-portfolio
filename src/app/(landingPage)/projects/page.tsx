@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import PageHero from "@/components/containers/Shared/PageHero";
 import ProjectCard from "@/components/ProjectCard";
 import { Project } from "@/types/project";
+import { ContactFormSectionV2 } from "@/components/containers/Shared/ContactFormSection";
 
 const filterOptions = [
   { id: 1, name: "All" },
@@ -135,7 +136,7 @@ const ProjectsPage = () => {
       />
 
       {/* Tabs */}
-      <div className="container flex justify-center py-8 flex-nowrap lg:flex-wrap overflow-x-auto gap-3 w-full lg:w-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      <div className="flex justify-center py-8 flex-nowrap lg:flex-wrap overflow-x-auto gap-3 w-full lg:w-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {filterOptions.map((item) => (
           <div key={item.id} id={`tab-${item.id}`} className="shrink-0">
             <button
@@ -153,7 +154,7 @@ const ProjectsPage = () => {
       </div>
 
       {/* Project list */}
-      <div className="container pb-20">
+      <div className="container pb-20 md:pb-32">
         <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 gap-8 relative"
@@ -179,6 +180,8 @@ const ProjectsPage = () => {
           </AnimatePresence>
         </motion.div>
       </div>
+
+      <ContactFormSectionV2 className="py-20 md:py-32 bg-card" />
     </div>
   );
 };

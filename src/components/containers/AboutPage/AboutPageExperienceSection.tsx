@@ -66,7 +66,7 @@ const AboutPageExperienceSection = ({ className }: { className?: string }) => {
   const scaleY = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001,
+    restDelta: 0.01,
   });
 
   return (
@@ -80,7 +80,7 @@ const AboutPageExperienceSection = ({ className }: { className?: string }) => {
 
         <div ref={containerRef} className="relative mt-24">
           {/* Main Vertical Line (Desktop) */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-[0.5px] h-full w-0.5 bg-border/40">
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-[0.5px] h-full w-0.5 bg-border/40 will-change-transform">
             <motion.div
               className="absolute top-0 left-0 right-0 bg-orange-500 origin-top"
               style={{ scaleY, height: "100%" }}
@@ -88,7 +88,7 @@ const AboutPageExperienceSection = ({ className }: { className?: string }) => {
           </div>
 
           {/* Main Vertical Line (Mobile) */}
-          <div className="md:hidden absolute left-8 top-0 h-full w-0.5 bg-border/40">
+          <div className="md:hidden absolute left-4 sm:left-6 top-0 h-full w-0.5 bg-border/40 will-change-transform">
             <motion.div
               className="absolute top-0 left-0 right-0 bg-orange-500 origin-top"
               style={{ scaleY, height: "100%" }}
@@ -108,9 +108,9 @@ const AboutPageExperienceSection = ({ className }: { className?: string }) => {
                   )}
                 >
                   {/* Timeline Icon */}
-                  <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 z-10 top-6">
-                    <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center border-4 border-background shadow-sm">
-                      <Briefcase className="w-5 h-5 text-orange-600" />
+                  <div className="absolute left-4 sm:left-6 md:left-1/2 transform -translate-x-1/2 z-10 top-6">
+                    <div className="w-9 h-9 md:w-12 md:h-12 rounded-full bg-orange-100 flex items-center justify-center border-2 md:border-4 border-background shadow-sm">
+                      <Briefcase className="w-4 h-4 md:w-5 md:h-5 text-orange-600" />
                     </div>
                   </div>
 
@@ -120,17 +120,17 @@ const AboutPageExperienceSection = ({ className }: { className?: string }) => {
                   {/* Content Card */}
                   <div
                     className={cn(
-                      "w-full md:w-1/2 pl-12",
+                      "w-full md:w-1/2 pl-10 sm:pl-12 md:pl-0",
                       isEven ? "md:pl-0 md:pr-16" : "md:pl-16 md:pr-0"
                     )}
                   >
                     <motion.div
-                      initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+                      initial={{ opacity: 0, x: isEven ? -20 : 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.2 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
                       className={cn(
-                        "relative group",
+                        "relative group will-change-[transform,opacity]",
                         isEven ? "md:mr-auto" : "md:ml-auto"
                       )}
                     >

@@ -27,7 +27,7 @@ const AboutHeroSection = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-lustria tracking-tight text-foreground leading-[1.15] md:leading-[1.1]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-lustria tracking-tight text-foreground leading-[1.15] md:leading-[1.1]">
             Passionate <br />
             <span className="text-orange-400">Frontend Engineer</span>
           </h1>
