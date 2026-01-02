@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ComponentProps } from "@/types";
+import { ComponentProps } from "react";
 import SectionHeader from "../Shared/SectionHeader";
 import { homePageSkillData } from "@/assets/icons/techIcons";
 import {
@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-interface Props extends ComponentProps {}
+interface Props extends ComponentProps<"section"> {}
 
 const SkillSection = ({ className }: Props) => {
   return (
@@ -26,7 +26,7 @@ const SkillSection = ({ className }: Props) => {
             <div key={skill.id}>
               <Tooltip>
                 <TooltipTrigger>
-                  <div className="p-2 md:p-4 bg-background rounded-lg h-16 md:h-28 w-16 md:w-28 flex items-center justify-center">
+                  <div className="p-2 md:p-4 bg-background rounded-md h-16 md:h-28 w-16 md:w-28 flex items-center justify-center">
                     {skill.icon}
                   </div>
                 </TooltipTrigger>

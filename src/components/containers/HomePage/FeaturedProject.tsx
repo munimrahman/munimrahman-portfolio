@@ -5,7 +5,7 @@ import ReactLenis from "lenis/react";
 import React, { useRef } from "react";
 import { CaseStudyCard, CaseStudyCardProps } from "../../CaseStudyCard";
 import SectionHeader from "../Shared/SectionHeader";
-import { ComponentProps } from "@/types";
+import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
 const caseStudies: CaseStudyCardProps[] = [
@@ -100,7 +100,7 @@ const StickyCard_001 = ({
   );
 };
 
-interface Props extends ComponentProps {}
+interface Props extends ComponentProps<"section"> {}
 
 const FeaturedProject = ({ className }: Props) => {
   const container = useRef<HTMLDivElement>(null);

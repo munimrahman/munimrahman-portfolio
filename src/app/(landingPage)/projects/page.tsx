@@ -19,7 +19,7 @@ const dummyProjects: Project[] = [
     title: "Modern Portfolio",
     description:
       "A high-performance personal portfolio built with Next.js 15, Tailwind CSS, and Framer Motion for smooth animations and a premium feel.",
-    image: "/images/mock.webp",
+    image: "/images/portfolio.png",
     techStack: [
       { name: "Next.js", icon: "Zap" },
       { name: "Tailwind", icon: "Palette" },
@@ -37,67 +37,23 @@ const dummyProjects: Project[] = [
   },
   {
     id: 2,
-    title: "EcoShop E-commerce",
+    title: "Pro Peak Job Portal",
     description:
-      "A sustainable e-commerce platform featuring a modern UI, Stripe integration, and a custom CMS for seamless product management.",
-    image:
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1000&auto=format&fit=crop",
+      "ProPeak is a developer-centric job portal connecting tech professionals with global job opportunities, company listings, and career resources in one intuitive platform.",
+    image: "/images/pro-peak.png",
     techStack: [
+      { name: "Tailwind", icon: "Layers" },
       { name: "React", icon: "Layers" },
+      { name: "Redux", icon: "Layers" },
       { name: "Node.js", icon: "Server" },
-      { name: "Stripe", icon: "CreditCard" },
+      { name: "Express", icon: "Server" },
+      { name: "MongoDB", icon: "CreditCard" },
+      { name: "Mongoose", icon: "CreditCard" },
+      { name: "JWT", icon: "CreditCard" },
     ],
     githubUrl: "",
-    liveUrl: "#",
-    category: "Case Studies",
-  },
-  {
-    id: 3,
-    title: "TaskFlow Manager",
-    description:
-      "Collaborative task management tool with real-time updates, drag-and-drop kanban boards, and detailed team productivity analytics.",
-    image:
-      "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=1000&auto=format&fit=crop",
-    techStack: [
-      { name: "TypeScript", icon: "Code" },
-      { name: "Prisma", icon: "Database" },
-      { name: "PostgreSQL", icon: "Table" },
-    ],
-    githubUrl: "#",
-    liveUrl: "",
+    liveUrl: "https://pro-peak.netlify.app/",
     category: "Projects",
-  },
-  {
-    id: 4,
-    title: "AI Chat Assistant",
-    description:
-      "Intelligent chatbot powered by OpenAI's GPT-4, capable of context-aware conversations and automated document summarization.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop",
-    techStack: [
-      { name: "Python", icon: "Terminal" },
-      { name: "OpenAI", icon: "Cpu" },
-      { name: "FastAPI", icon: "Zap" },
-    ],
-    githubUrl: "#",
-    liveUrl: "#",
-    category: "Projects",
-  },
-  {
-    id: 5,
-    title: "HomeHunt Portal",
-    description:
-      "Real estate searching platform with interactive maps, neighborhood statistics, and a virtual 3D tour for premium listings.",
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop",
-    techStack: [
-      { name: "Next.js", icon: "Home" },
-      { name: "Google Maps", icon: "Map" },
-      { name: "Firebase", icon: "Flame" },
-    ],
-    githubUrl: "#",
-    liveUrl: "#",
-    category: "Case Studies",
   },
 ];
 

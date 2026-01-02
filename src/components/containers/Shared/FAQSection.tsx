@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentProps, FAQItem } from "@/types";
+import { FAQItem } from "@/types";
 import SectionHeader from "./SectionHeader";
 import {
   Accordion,
@@ -8,10 +8,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { ComponentProps, useState } from "react";
 
-interface Props extends ComponentProps {
+interface Props extends ComponentProps<"section"> {
   faqs: FAQItem[];
 }
 

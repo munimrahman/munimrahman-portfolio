@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import ButtonPrimary from "../ui/button/button-primary";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -104,12 +105,13 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
                 variants={itemVariants}
                 className="pt-8 border-t border-border"
               >
-                <button
+                <ButtonPrimary
+                  href="/contact"
                   onClick={onClose}
-                  className="w-full bg-primary text-primary-foreground py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-all active:scale-[0.98]"
+                  className="w-full py-4 font-semibold text-lg"
                 >
                   Start a Project
-                </button>
+                </ButtonPrimary>
               </motion.div>
             </div>
           </motion.div>

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Github, Linkedin, Twitter, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import ButtonPrimary from "@/components/ui/button/button-primary";
+import ButtonSecondary from "@/components/ui/button/button-secondary";
 
 const HomeHeroSection = () => {
   return (
@@ -40,13 +42,9 @@ const HomeHeroSection = () => {
         </div>
 
         <div className="flex flex-row items-center gap-4 mb-6 md:mb-12">
-          <button className="bg-primary text-xs md:text-base text-primary-foreground px-4 md:px-8 py-2.5 md:py-4 rounded-full font-medium flex items-center gap-2 hover:opacity-90 transition-all">
-            🚀 Start a Project
-          </button>
+          <ButtonPrimary>🚀 Start a Project</ButtonPrimary>
 
-          <button className="border border-border text-xs md:text-base px-4 md:px-8 py-2.5 md:py-4 rounded-full font-medium hover:bg-muted transition-all">
-            View My Work
-          </button>
+          <ButtonSecondary>View My Work</ButtonSecondary>
         </div>
 
         {/* Social Icons */}
