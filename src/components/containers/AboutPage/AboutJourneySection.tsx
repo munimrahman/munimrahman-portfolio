@@ -38,7 +38,7 @@ const AboutJourneySection = ({ className }: ComponentProps) => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:row-span-2 relative lg:self-center"
           >
-            <div className="relative aspect-4/5 w-full max-w-md lg:max-w-[420px] rounded-2xl overflow-hidden border border-border/40 shadow-2xl shadow-orange-500/10 mx-auto">
+            <div className="relative aspect-4/5 w-full max-w-md lg:max-w-105 rounded-2xl overflow-hidden border border-border/40 shadow-2xl shadow-orange-500/10 mx-auto">
               <div className="absolute inset-0 bg-secondary/50 flex items-center justify-center">
                 <Image
                   src="/images/about.avif"

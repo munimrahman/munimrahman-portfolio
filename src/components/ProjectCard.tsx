@@ -47,7 +47,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 aria-label="Case Study"
               >
                 <span>View Case Study</span>
-                <LucideIcons.ArrowRight className="w-3.5 h-3.5 sm:w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                <LucideIcons.ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover/link:translate-x-1" />
               </Link>
             )}
           </div>
@@ -88,7 +88,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 className="p-2 sm:p-2.5 rounded-xl bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 border border-border"
                 aria-label="GitHub Repository"
               >
-                <Github className="w-4 h-4 sm:w-5 h-5" />
+                <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             )}
             {project.liveUrl && (
@@ -99,7 +99,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 className="p-2 sm:p-2.5 rounded-xl bg-muted text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 border border-border"
                 aria-label="Live Demo"
               >
-                <ExternalLink className="w-4 h-4 sm:w-5 h-5" />
+                <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             )}
           </div>
