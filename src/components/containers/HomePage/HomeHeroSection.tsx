@@ -16,7 +16,7 @@ const HomeHeroSection = () => {
         <div className="relative mb-3 md:mb-8">
           <div className="h-20 md:h-24 w-20 md:w-24 rounded-full border-4 border-card shadow-lg overflow-hidden">
             <Image
-              src="/demo-pp.jpg"
+              src="/assets/images/munim-rahman.png"
               alt="Profile"
               width={100}
               height={100}

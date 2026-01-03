@@ -15,7 +15,7 @@ export function CaseStudyCard({
   className,
   ...props
 }: CaseStudyCardProps) {
-  const { title, description, techStack, image, lightBg, darkBg } = project;
+  const { title, description, tags, image, lightBg, darkBg } = project;
   const { theme } = useTheme();
 
   const isDark =
@@ -29,14 +29,14 @@ export function CaseStudyCard({
     <div
       {...props}
       className={cn(
-        "rounded-2xl md:rounded-3xl px-6 py-8 md:px-10 md:py-14 max-w-6xl mx-auto overflow-hidden",
+        "rounded-2xl md:rounded-3xl px-6 py-8 md:px-10 md:py-14 md:w-6xl mx-auto overflow-hidden",
         className
       )}
       style={{ backgroundColor: cardBackground }}
     >
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         {/* Left Content */}
-        <div className="flex flex-col h-full justify-between gap-6 md:gap-8">
+        <div className="flex flex-col h-full justify-between gap-6 md:gap-0">
           <div className="space-y-4 md:space-y-6">
             <h2 className="text-xl md:text-3xl font-medium text-foreground tracking-tight">
               {title}
@@ -64,12 +64,12 @@ export function CaseStudyCard({
           </div>
 
           <div className="flex flex-wrap gap-2 md:gap-3">
-            {techStack.map((tech) => (
+            {tags.map((tech) => (
               <span
-                key={tech.name}
+                key={tech}
                 className="px-4 py-2 rounded-full text-xs md:text-sm font-medium border border-foreground/10 bg-background/80 md:bg-background/50 md:backdrop-blur-sm shadow-sm"
               >
-                {tech.name}
+                {tech}
               </span>
             ))}
           </div>

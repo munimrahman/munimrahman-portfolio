@@ -139,7 +139,7 @@ const NavBar = () => {
               href="/contact"
               className="hidden md:block bg-primary text-primary-foreground px-4 md:px-6 py-2.5 md:py-2 rounded-full font-medium"
             >
-              Start a Project
+              Download CV
             </ButtonPrimary> */}
             <ThemeToggle />
             {/* Mobile Menu Toggle */}

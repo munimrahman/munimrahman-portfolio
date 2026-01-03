@@ -10,6 +10,7 @@ import {
   Globe,
 } from "lucide-react";
 import Link from "next/link";
+import { links } from "@/constants";
 
 const AboutHeroSection = () => {
   return (
@@ -47,7 +48,7 @@ const AboutHeroSection = () => {
 
             <div className="relative w-full h-full overflow-hidden rounded-2xl md:rounded-[2rem] border border-orange-500/10 shadow-2xl shadow-orange-500/5">
               <Image
-                src="/images/about.avif"
+                src="/assets/images/munim.jpeg"
                 alt="Munim Rahman"
                 fill
                 className="object-cover lg:hover:scale-105 transition-transform duration-700 lg:hover:rotate-1"
@@ -90,19 +91,22 @@ const AboutHeroSection = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-8">
               <Link
-                href="#"
+                href={links.github}
+                target="_blank"
                 className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
               >
                 <Github className="w-4 h-4 md:w-5 md:h-5" />
               </Link>
               <Link
-                href="#"
+                href={links.linkedin}
+                target="_blank"
                 className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
               >
                 <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
               </Link>
               <Link
-                href="#"
+                href={links.twitter}
+                target="_blank"
                 className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
               >
                 <Twitter className="w-4 h-4 md:w-5 md:h-5" />

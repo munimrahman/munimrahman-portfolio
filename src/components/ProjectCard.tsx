@@ -40,7 +40,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             <h3 className="text-xl sm:text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
               {project.title}
             </h3>
-            {project.category === "Case Study" && (
+            {project.category === "Case Studies" && (
               <Link
                 href="#"
                 className="text-primary text-sm font-medium flex items-center gap-1 group/link shrink-0"

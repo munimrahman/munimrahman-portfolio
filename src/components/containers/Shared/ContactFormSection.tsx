@@ -192,7 +192,7 @@ const ContactFormSection = ({ className }: Props) => {
             <div className="flex gap-4 md:gap-6 items-end">
               <figure className="w-16 h-16 md:w-28 lg:w-32 md:h-28 lg:h-32">
                 <Image
-                  src="/images/about.avif"
+                  src="/assets/images/munim-rahman.png"
                   alt="Contact Us"
                   className="w-full h-full object-cover rounded md:rounded-lg"
                   width={150}

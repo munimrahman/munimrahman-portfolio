@@ -14,5 +14,5 @@ export interface Project {
   darkBg?: string;
   githubUrl?: string;
   liveUrl?: string;
-  category: "Project" | "Case Study";
+  category: "Projects" | "Case Studies";
 }

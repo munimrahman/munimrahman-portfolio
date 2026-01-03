@@ -46,7 +46,7 @@ const StickyCard_001 = ({
         {/* <img src={src} alt={title} className="h-full w-full object-cover" /> */}
         <CaseStudyCard
           project={caseStudy}
-          className={i === 3 ? "max-w-5xl" : ""}
+          // className={i === 3 ? "max-w-5xl" : ""}
         />
       </motion.div>
     </div>

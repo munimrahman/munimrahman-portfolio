@@ -3,118 +3,138 @@ import { Project } from "@/types";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "SaaS Admin Dashboard",
+    title: "Inventiro - Inventory & POS Solution",
     description:
-      "A high-performance admin dashboard with role-based access control, real-time data visualization, and seamless API integrations.",
-    tags: ["React", "Tailwind CSS", "Recharts", "API Integration"],
-    image: "/images/inventiro.png",
-    lightBg: "#ffedd5", // Orange-100
+      "An enterprise SaaS platform for managing supply chains with multi-warehouse control, e-commerce syncing, POS, and real-time inventory.",
+    tags: ["Next.js", "PrimeReact", "Redux Toolkit", "Tailwind CSS"],
+    image: "/assets/images/inventiro.png",
+    lightBg: "#fff7ed", // Warm Orange-50 (Premium look)
     darkBg: "#1c1917", // Stone-900 (Warm dark)
     techStack: [
       {
-        name: "React",
-        icon: "",
+        name: "Next.js",
+        icon: "", // You can add React/Next icon name here
       },
       {
-        name: "Tailwind CSS",
-        icon: "",
+        name: "PrimeReact",
+        icon: "", // Enterprise UI components
       },
       {
-        name: "Recharts",
-        icon: "",
+        name: "Chart.js",
+        icon: "", // For real-time data visualization
       },
       {
-        name: "API Integration",
-        icon: "",
+        name: "RBAC",
+        icon: "", // Role-Based Access Control
       },
     ],
-    category: "Project",
+    category: "Projects",
   },
   {
     id: 2,
-    title: "Enterprise SEO Platform",
+    title: "Pro Peak – MERN Job Portal",
     description:
-      "Scalable architected Next.js site handling thousands of pages with perfect Core Web Vitals and programmatic SEO structure.",
-    tags: ["Next.js", "SEO", "TypeScript", "Core Web Vitals"],
-    image: "/images/demo-1.png",
-    lightBg: "#f3f4f6", // Gray-100
-    darkBg: "#18181b", // Zinc-950
+      "A MERN stack job portal with JWT authentication, scalable CRUD architecture, Redux state management, and planned real-time features like chat.",
+    tags: ["Tailwind CSS", "React", "Redux Toolkit", "Express"],
+    image: "/assets/images/pro-peak.png",
+    lightBg: "#f3f4f6", // Slate-50
+    darkBg: "#18181b", // Slate-950
     techStack: [
-      {
-        name: "Next.js",
-        icon: "",
-      },
-      {
-        name: "SEO",
-        icon: "",
-      },
-      {
-        name: "TypeScript",
-        icon: "",
-      },
-      {
-        name: "Core Web Vitals",
-        icon: "",
-      },
-    ],
-    category: "Project",
-  },
-  {
-    id: 3,
-    title: "E-commerce MVP",
-    description:
-      "Rapidly developed MVP for a fashion startup, featuring custom checkout flow, inventory management, and fast mobile performance.",
-    tags: ["Shopify", "React", "Mobile-first", "Stripe"],
-    image: "/images/voice-ink.png",
-    lightBg: "#fee2e2", // Red-100
-    darkBg: "#1c1917", // Stone-900
-    techStack: [
-      {
-        name: "Shopify",
-        icon: "",
-      },
       {
         name: "React",
         icon: "",
       },
       {
-        name: "Mobile-first",
+        name: "Redux Toolkit",
         icon: "",
       },
       {
-        name: "Stripe",
-        icon: "",
-      },
-    ],
-    category: "Project",
-  },
-  {
-    id: 4,
-    title: "Marketing Site Rebrand",
-    description:
-      "Complete overhaul of a legacy site to a modern, headless CMS powered Next.js application, resulting in 2x faster load times.",
-    tags: ["Next.js", "Headless CMS", "Framer Motion", "Tailwind CSS"],
-    image: "/images/link-admin.png",
-    lightBg: "#e0f2fe", // Sky-100
-    darkBg: "#0f172a", // Slate-900
-    techStack: [
-      {
-        name: "Next.js",
+        name: "Node.js",
         icon: "",
       },
       {
-        name: "Headless CMS",
+        name: "Express",
         icon: "",
       },
       {
-        name: "Framer Motion",
+        name: "MongoDB",
+        icon: "",
+      },
+      {
+        name: "Mongoose",
+        icon: "",
+      },
+      {
+        name: "JWT Authentication",
         icon: "",
       },
       {
         name: "Tailwind CSS",
         icon: "",
       },
+      {
+        name: "DaisyUI",
+        icon: "",
+      },
     ],
-    category: "Case Study",
+    category: "Projects",
+  },
+  {
+    id: 3,
+    title: "Voice Ink - Voice AI Platform",
+    description:
+      "An advanced AI-powered transcription and audio analysis platform that converts meetings, lectures, and voice notes into highly accurate text with smart speaker detection and 90+ language support.",
+    tags: ["Next.js", "Tailwind CSS", "AI Transcription", "Wavesurfer.js"],
+    image: "/assets/images/voice-ink.png", // আপনার ইমেজ পাথ অনুযায়ী ঠিক করে নিন
+    lightBg: "#fee2e2", // Soft Indigo-50 (প্রজেক্টের থিমের সাথে সামঞ্জস্যপূর্ণ)
+    darkBg: "#1c1917", // Deep Midnight (Modern AI feel)
+    techStack: [
+      {
+        name: "Next.js",
+        icon: "",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "",
+      },
+      {
+        name: "Wavesurfer.js",
+        icon: "",
+      },
+      {
+        name: "Radix UI",
+        icon: "",
+      },
+    ],
+    category: "Projects",
+  },
+  {
+    id: 4, // You can adjust the ID as needed
+    title: "Event & City Guide Admin",
+    description:
+      "A sophisticated administrative ecosystem built to manage an event-centric mobile platform. It features comprehensive listing moderation, event lifecycle management, and a robust role-based access control system.",
+    tags: ["Next.js 15", "Redux Toolkit", "Tailwind CSS", "TypeScript"],
+    image: "/assets/images/link-admin.png",
+    lightBg: "#e0f2fe", // Blue-50 (Matches your primary blue theme)
+    darkBg: "#0f172a", // Zinc-950 (Your current dark mode background)
+    techStack: [
+      {
+        name: "Next.js 15",
+        icon: "", // Add Next.js icon URL/component here
+      },
+      {
+        name: "Redux Toolkit",
+        icon: "", // Add Redux icon URL/component here
+      },
+      {
+        name: "Tailwind CSS 4",
+        icon: "", // Add Tailwind icon URL/component here
+      },
+      {
+        name: "Shadcn UI",
+        icon: "", // Add Shadcn icon URL/component here
+      },
+    ],
+    category: "Projects",
   },
 ];

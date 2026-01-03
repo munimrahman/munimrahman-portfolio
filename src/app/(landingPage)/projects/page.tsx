@@ -72,23 +72,42 @@ const ProjectsPage = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-8 relative"
         >
           <AnimatePresence mode="popLayout" initial={false}>
-            {filteredProjects.map((project) => (
+            {filteredProjects.length > 0 ? (
+              filteredProjects.map((project) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{
+                    duration: 0.4,
+                    ease: "easeInOut",
+                    layout: { duration: 0.4 },
+                  }}
+                  className="h-full"
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))
+            ) : (
               <motion.div
-                key={project.id}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{
-                  duration: 0.4,
-                  ease: "easeInOut",
-                  layout: { duration: 0.4 },
-                }}
-                className="h-full"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="col-span-full py-20 text-center"
               >
-                <ProjectCard project={project} />
+                <div className="bg-card border border-dashed border-border rounded-xl p-12">
+                  <h3 className="text-2xl font-semibold text-foreground/80">
+                    No projects or case study found
+                  </h3>
+                  <p className="text-muted-foreground mt-2">
+                    I haven&apos;t added any items to this category yet. Please
+                    check back later or try another filter!
+                  </p>
+                </div>
               </motion.div>
-            ))}
+            )}
           </AnimatePresence>
         </motion.div>
       </div>

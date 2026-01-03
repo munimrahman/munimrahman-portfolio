@@ -41,7 +41,7 @@ const AboutJourneySection = ({ className }: ComponentProps<"section">) => {
             <div className="relative aspect-4/5 w-full max-w-md lg:max-w-105 rounded-2xl overflow-hidden border border-border/40 shadow-2xl shadow-orange-500/10 mx-auto">
               <div className="absolute inset-0 bg-secondary/50 flex items-center justify-center">
                 <Image
-                  src="/images/about.avif"
+                  src="/assets/images/munim.jpeg"
                   alt="Munim Rahman working"
                   fill
                   className="object-cover"
