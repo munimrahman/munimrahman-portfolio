@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className="space-y-4">
                   <Link
                     href="/"
-                    className="text-2xl md:text-3xl font-bold text-orange-600 dark:text-orange-500 tracking-tight leading-none"
+                    className="text-2xl md:text-3xl font-bold text-orange tracking-tight leading-none"
                   >
                     Munim Rahman
                   </Link>

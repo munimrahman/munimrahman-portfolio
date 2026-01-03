@@ -3,6 +3,7 @@ import { Github, Linkedin, Twitter, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import ButtonPrimary from "@/components/ui/button/button-primary";
 import ButtonSecondary from "@/components/ui/button/button-secondary";
+import { links } from "@/constants";
 
 const HomeHeroSection = () => {
   return (
@@ -42,27 +43,30 @@ const HomeHeroSection = () => {
         </div>
 
         <div className="flex flex-row items-center gap-4 mb-6 md:mb-12">
-          <ButtonPrimary>🚀 Start a Project</ButtonPrimary>
+          <ButtonPrimary href="/contact">🚀 Start a Project</ButtonPrimary>
 
-          <ButtonSecondary>View My Work</ButtonSecondary>
+          <ButtonSecondary href="/projects">View My Work</ButtonSecondary>
         </div>
 
         {/* Social Icons */}
         <div className="flex items-center gap-8">
           <Link
-            href="#"
+            href={links.github}
+            target="_blank"
             className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
           >
             <Github className="w-4 h-4 md:w-5 md:h-5" />
           </Link>
           <Link
-            href="#"
+            href={links.linkedin}
+            target="_blank"
             className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
           >
             <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
           </Link>
           <Link
-            href="#"
+            href={links.twitter}
+            target="_blank"
             className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-orange-200 text-orange-400 hover:text-orange-500 hover:border-orange-500 hover:bg-orange-100 transition-all duration-300"
           >
             <Twitter className="w-4 h-4 md:w-5 md:h-5" />

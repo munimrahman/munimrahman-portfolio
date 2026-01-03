@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import MenuToggle from "./MenuToggle";
 import MobileMenu from "./MobileMenu";
-import ButtonPrimary from "../ui/button/button-primary";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -136,12 +135,12 @@ const NavBar = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <ButtonPrimary
+            {/* <ButtonPrimary
               href="/contact"
               className="hidden md:block bg-primary text-primary-foreground px-4 md:px-6 py-2.5 md:py-2 rounded-full font-medium"
             >
               Start a Project
-            </ButtonPrimary>
+            </ButtonPrimary> */}
             <ThemeToggle />
             {/* Mobile Menu Toggle */}
             <MenuToggle
