@@ -7,9 +7,12 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  image: string;
   techStack: TechStack[];
+  tags: string[];
+  image: string;
+  lightBg?: string;
+  darkBg?: string;
   githubUrl?: string;
   liveUrl?: string;
-  category?: string;
+  category: "Project" | "Case Study";
 }

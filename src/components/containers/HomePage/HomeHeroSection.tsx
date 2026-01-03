@@ -13,8 +13,8 @@ const HomeHeroSection = () => {
       </div>
 
       <div className="relative z-10 flex flex-col items-center text-center">
-        <div className="relative mb-4 md:mb-8">
-          <div className="w-24 h-24 rounded-full border-4 border-card shadow-lg overflow-hidden">
+        <div className="relative mb-3 md:mb-8">
+          <div className="h-20 md:h-24 w-20 md:w-24 rounded-full border-4 border-card shadow-lg overflow-hidden">
             <Image
               src="/demo-pp.jpg"
               alt="Profile"
@@ -24,7 +24,7 @@ const HomeHeroSection = () => {
             />
           </div>
         </div>
-        <p className="text-sm md:text-xl text-foreground font-light max-w-2xl leading-relaxed mb-4 md:mb-6">
+        <p className="text-sm md:text-xl text-foreground font-light max-w-2xl leading-relaxed mb-3 md:mb-6">
           👋 Hi, I&apos;m Munim Rahman
         </p>
         <h1 className="text-3xl md:text-5xl font-lustria text-foreground mb-4 md:mb-6 leading-tight">
@@ -32,9 +32,9 @@ const HomeHeroSection = () => {
         </h1>
 
         <h2 className="text-lg md:text-2xl text-muted-foreground font-light mb-6 md:mb-10 md:leading-relaxed max-w-4xl">
-          I specialize in crafting fast, SEO-ready frontend experiences while
-          understanding backend systems, APIs, and real-world production
-          workflows.
+          I specialize in building fast, SEO-ready frontend experiences for
+          startups and growing businesses using React and Next.js, with hands-on
+          experience in backend development and production systems.
         </h2>
 
         <div className="w-full flex flex-wrap justify-center items-center gap-2 md:gap-6 opacity-60 text-sm md:text-base mb-6 md:mb-10">
@@ -45,7 +45,7 @@ const HomeHeroSection = () => {
         <div className="flex flex-row items-center gap-4 mb-6 md:mb-12">
           <ButtonPrimary href="/contact">🚀 Start a Project</ButtonPrimary>
 
-          <ButtonSecondary href="/projects">View My Work</ButtonSecondary>
+          <ButtonSecondary href="/projects">See My Work</ButtonSecondary>
         </div>
 
         {/* Social Icons */}

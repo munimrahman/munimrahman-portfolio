@@ -13,45 +13,48 @@ import { cn } from "@/lib/utils";
 
 const services = [
   {
-    title: "Next.js Website & Admin Dashboard",
+    title: "Next.js Frontend Engineering",
     description:
-      "I build SEO-friendly landing pages, marketing websites, and custom admin dashboards using Next.js — designed for speed, scalability, and long-term maintainability.",
+      "Launch production ready MVPs and SaaS products with a frontend architecture designed for growth.",
     icon: Layout,
     features: [
-      "Clean, scalable frontend architecture",
-      "Custom UI systems for dashboards & tools",
-      "Performance-focused rendering",
+      "Fast, responsive React & Next.js interfaces",
+      "Clean, maintainable frontend architecture",
+      "SEO friendly structure and routing",
+      "Production ready UI built to scale",
     ],
     cta: "Learn more",
-    href: "/services/web-development",
+    href: "#",
     gradient: "from-orange-500/20 to-amber-500/20",
   },
   {
-    title: "SaaS MVP Development",
+    title: "SaaS & MVP Development",
     description:
-      "I help founders turn ideas into production-ready SaaS MVPs with an architecture that won’t need a rewrite as the product grows.",
+      "FEnd-to-end MVP and SaaS development using React, Next.js, and scalable backend architectures built with Express.js or NestJS.",
     icon: Code,
     features: [
-      "MVP-focused feature planning",
+      "MVP development from idea to launch",
+      "Scalable frontend with React & Next.js",
       "Robust Auth & Database setup",
-      "Scalable SaaS architecture",
+      "Backend using Express.js or NestJS",
     ],
     cta: "See how I build MVPs",
-    href: "/services/saas-mvp",
+    href: "#",
     gradient: "from-blue-500/20 to-indigo-500/20",
   },
   {
-    title: "Next.js SEO & Performance Optimization",
+    title: "Next.js SEO & Performance",
     description:
-      "SEO for Next.js requires more than plugins. I optimize applications at the architecture level for visibility in Google and modern AI search engines.",
+      "Improve visibility, speed, and Core Web Vitals for Next.js applications without breaking your existing setup.",
     icon: BarChart,
     features: [
       "Technical SEO for Next.js",
       "Core Web Vitals Optimization",
       "Structured Data & Sitemap",
+      "SEO safe builds for long term growth",
     ],
     cta: "Improve your SEO",
-    href: "/services/seo",
+    href: "#",
     gradient: "from-green-500/20 to-emerald-500/20",
   },
 ];
@@ -63,7 +66,7 @@ const ServicesSection = ({ className }: { className?: string }) => {
         <SectionHeader
           name="Expertise"
           title="How I Can Help You"
-          description="I focus on building scalable, performance-driven Next.js applications — not generic websites."
+          description="I help startups and growing businesses build fast, reliable, and scalable web applications that perform well in the real world."
         />
 
         <div className="mt-12 md:mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -119,12 +122,11 @@ const ServicesSection = ({ className }: { className?: string }) => {
 
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Depending on your project needs, I also help with headless CMS
-              integration (Sanity, Strapi, Contentful),{" "}
-              <Link href={"/"}>Facebook Conversion API</Link>, GA4 analytics
-              setup, Next.js + Shopify storefronts, and ongoing performance
-              optimization. These capabilities support scalable architecture,
-              better tracking, and long-term growth across modern web and SaaS
-              applications.
+              integration (Sanity, Strapi, Contentful), Facebook Conversion API,
+              GA4 analytics setup, Next.js + Shopify storefronts, and ongoing
+              performance optimization. These capabilities support scalable
+              architecture, better tracking, and long-term growth across modern
+              web and SaaS applications.
             </p>
           </div>
         </div>

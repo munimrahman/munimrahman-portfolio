@@ -4,57 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import PageHero from "@/components/containers/Shared/PageHero";
 import ProjectCard from "@/components/ProjectCard";
-import { Project } from "@/types/project";
 import { ContactFormSectionV2 } from "@/components/containers/Shared/ContactFormSection";
+import { projects } from "@/constants";
 
 const filterOptions = [
   { id: 1, name: "All" },
   { id: 2, name: "Projects" },
   { id: 3, name: "Case Studies" },
-];
-
-const dummyProjects: Project[] = [
-  {
-    id: 1,
-    title: "Modern Portfolio",
-    description:
-      "A high-performance personal portfolio built with Next.js 15, Tailwind CSS, and Framer Motion for smooth animations and a premium feel.",
-    image: "/images/portfolio.png",
-    techStack: [
-      { name: "Next.js", icon: "Zap" },
-      { name: "Tailwind", icon: "Palette" },
-      { name: "Motion", icon: "Activity" },
-      { name: "React", icon: "Layers" },
-      { name: "Node.js", icon: "Server" },
-      { name: "Stripe", icon: "CreditCard" },
-      { name: "TypeScript", icon: "Code" },
-      { name: "Prisma", icon: "Database" },
-      { name: "PostgreSQL", icon: "Table" },
-    ],
-    githubUrl: "",
-    liveUrl: "",
-    category: "Projects",
-  },
-  {
-    id: 2,
-    title: "Pro Peak Job Portal",
-    description:
-      "ProPeak is a developer-centric job portal connecting tech professionals with global job opportunities, company listings, and career resources in one intuitive platform.",
-    image: "/images/pro-peak.png",
-    techStack: [
-      { name: "Tailwind", icon: "Layers" },
-      { name: "React", icon: "Layers" },
-      { name: "Redux", icon: "Layers" },
-      { name: "Node.js", icon: "Server" },
-      { name: "Express", icon: "Server" },
-      { name: "MongoDB", icon: "CreditCard" },
-      { name: "Mongoose", icon: "CreditCard" },
-      { name: "JWT", icon: "CreditCard" },
-    ],
-    githubUrl: "",
-    liveUrl: "https://pro-peak.netlify.app/",
-    category: "Projects",
-  },
 ];
 
 const ProjectsPage = () => {
@@ -75,8 +31,8 @@ const ProjectsPage = () => {
 
   const filteredProjects =
     selectedFilter === 1
-      ? dummyProjects
-      : dummyProjects.filter(
+      ? projects
+      : projects.filter(
           (p) =>
             p.category ===
             filterOptions.find((f) => f.id === selectedFilter)?.name

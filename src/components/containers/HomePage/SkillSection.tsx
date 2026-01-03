@@ -17,7 +17,7 @@ const SkillSection = ({ className }: Props) => {
         <SectionHeader
           name="Skills"
           title="My Tech Stack"
-          description="I specialize in crafting fast, SEO-ready frontend experiences while understanding backend systems, APIs, and real-world production workflows."
+          description="Technologies I use daily to build production ready applications"
         />
 
         {/* Skill Grid */}

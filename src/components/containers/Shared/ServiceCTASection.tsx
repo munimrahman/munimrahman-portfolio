@@ -15,7 +15,7 @@ const ServicesCTASection = ({ className }: Props) => {
 
           <div className="relative z-10">
             <h2 className="text-xl md:text-3xl lg:text-5xl font-bold text-foreground uppercase mb-4 md:mb-5 lg:mb-6 leading-tight">
-              Ready to Transform Your Business?
+              Have a project in mind? Let’s talk.
             </h2>
             <p className="text-sm md:text-lg lg:text-xl text-muted-foreground mb-8 md:mb-7 lg:mb-8 max-w-2xl mx-auto px-2">
               Let&apos;s discuss how our AI automation services can help you

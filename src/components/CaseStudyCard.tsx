@@ -1,25 +1,21 @@
 import Image from "next/image";
 
-export interface CaseStudyCardProps {
-  title: string;
-  description: string;
-  tags: string[];
-  image: string;
-  lightBg: string;
-  darkBg: string;
-}
-
 import { useTheme } from "@/providers/ThemeProvider";
 import ButtonPrimary from "./ui/button/button-primary";
+import { cn } from "@/lib/utils";
+import { ComponentProps } from "react";
+import { Project } from "@/types";
+
+interface CaseStudyCardProps extends ComponentProps<"div"> {
+  project: Project;
+}
 
 export function CaseStudyCard({
-  title,
-  description,
-  tags,
-  image,
-  lightBg,
-  darkBg,
+  project,
+  className,
+  ...props
 }: CaseStudyCardProps) {
+  const { title, description, techStack, image, lightBg, darkBg } = project;
   const { theme } = useTheme();
 
   const isDark =
@@ -31,7 +27,11 @@ export function CaseStudyCard({
   const cardBackground = isDark ? darkBg : lightBg;
   return (
     <div
-      className="rounded-2xl md:rounded-3xl px-6 py-8 md:px-10 md:py-14 max-w-6xl mx-auto overflow-hidden"
+      {...props}
+      className={cn(
+        "rounded-2xl md:rounded-3xl px-6 py-8 md:px-10 md:py-14 max-w-6xl mx-auto overflow-hidden",
+        className
+      )}
       style={{ backgroundColor: cardBackground }}
     >
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
@@ -64,12 +64,12 @@ export function CaseStudyCard({
           </div>
 
           <div className="flex flex-wrap gap-2 md:gap-3">
-            {tags.map((tag) => (
+            {techStack.map((tech) => (
               <span
-                key={tag}
-                className="px-4 py-2 rounded-full text-xs md:text-sm font-medium border border-foreground/10 bg-background/50 backdrop-blur-sm shadow-sm"
+                key={tech.name}
+                className="px-4 py-2 rounded-full text-xs md:text-sm font-medium border border-foreground/10 bg-background/80 md:bg-background/50 md:backdrop-blur-sm shadow-sm"
               >
-                {tag}
+                {tech.name}
               </span>
             ))}
           </div>

@@ -3,55 +3,18 @@
 import { motion, useScroll, useTransform, MotionValue } from "motion/react";
 import ReactLenis from "lenis/react";
 import React, { useRef } from "react";
-import { CaseStudyCard, CaseStudyCardProps } from "../../CaseStudyCard";
+import { CaseStudyCard } from "../../CaseStudyCard";
 import SectionHeader from "../Shared/SectionHeader";
 import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
-
-const caseStudies: CaseStudyCardProps[] = [
-  {
-    title: "SaaS Admin Dashboard",
-    description:
-      "A high-performance admin dashboard with role-based access control, real-time data visualization, and seamless API integrations.",
-    tags: ["React", "Tailwind CSS", "Recharts", "API Integration"],
-    image: "/images/inventiro.png",
-    lightBg: "#ffedd5", // Orange-100
-    darkBg: "#1c1917", // Stone-900 (Warm dark)
-  },
-  {
-    title: "Enterprise SEO Platform",
-    description:
-      "Scalable architected Next.js site handling thousands of pages with perfect Core Web Vitals and programmatic SEO structure.",
-    tags: ["Next.js", "SEO", "TypeScript", "Core Web Vitals"],
-    image: "/images/demo-1.png",
-    lightBg: "#f3f4f6", // Gray-100
-    darkBg: "#18181b", // Zinc-950
-  },
-  {
-    title: "E-commerce MVP",
-    description:
-      "Rapidly developed MVP for a fashion startup, featuring custom checkout flow, inventory management, and fast mobile performance.",
-    tags: ["Shopify", "React", "Mobile-first", "Stripe"],
-    image: "/images/voice-ink.png",
-    lightBg: "#fee2e2", // Red-100
-    darkBg: "#1c1917", // Stone-900
-  },
-  {
-    title: "Marketing Site Rebrand",
-    description:
-      "Complete overhaul of a legacy site to a modern, headless CMS powered Next.js application, resulting in 2x faster load times.",
-    tags: ["Next.js", "Headless CMS", "Framer Motion", "Tailwind CSS"],
-    image: "/images/link-admin.png",
-    lightBg: "#e0f2fe", // Sky-100
-    darkBg: "#0f172a", // Slate-900
-  },
-];
+import { projects } from "@/constants";
+import { Project } from "@/types";
 
 // ... existing code ...
 
 interface StickyCard_001Props {
   i: number;
-  caseStudy: CaseStudyCardProps;
+  caseStudy: Project;
   progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
@@ -82,13 +45,8 @@ const StickyCard_001 = ({
       >
         {/* <img src={src} alt={title} className="h-full w-full object-cover" /> */}
         <CaseStudyCard
-          key={i}
-          title={caseStudy.title}
-          description={caseStudy.description}
-          tags={caseStudy.tags}
-          image={caseStudy.image}
-          lightBg={caseStudy.lightBg}
-          darkBg={caseStudy.darkBg}
+          project={caseStudy}
+          className={i === 3 ? "max-w-5xl" : ""}
         />
       </motion.div>
     </div>
@@ -110,20 +68,19 @@ const FeaturedProject = ({ className }: Props) => {
         <div
           ref={container}
           className={cn(
-            "relative flex w-full flex-col items-center justify-center pb-[12vh]"
+            "relative flex w-full flex-col items-center justify-center pb-[5vh]"
           )}
         >
           <SectionHeader
             name="Featured Projects"
-            title="Real-World Experience"
-            description="Not Just Demos. Production-ready applications."
+            title="Selected Projects"
+            description="Production-ready applications built for real-world use"
             className=""
           />
-          {caseStudies.map((project, i) => {
-            const targetScale = Math.max(
-              0.5,
-              1 - (caseStudies.length - i - 1) * 0.1
-            );
+          {projects.map((project, i) => {
+            const targetScale =
+              Math.max(0.5, 1 - (projects.length - i - 1) * 0.1) *
+              (i === projects.length - 1 ? 0.97 : 1);
             return (
               <StickyCard_001
                 key={`p_${i}`}

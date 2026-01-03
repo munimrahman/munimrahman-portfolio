@@ -18,16 +18,22 @@ interface Props {
 
 const problems = [
   {
-    icon: Search,
-    title: "Invisible in Search & AI Results",
-    description:
-      "Your site exists, but it’s not being recommended - by Google or AI search engines.Without structured, SEO-aware architecture, your product stays invisible.",
-  },
-  {
     icon: Smartphone,
     title: "A Frontend That Doesn’t Feel Like a Product",
     description:
       "Your app works, but it doesn’t feel polished or intuitive. Poor UX and slow interactions quietly push users away.",
+  },
+  {
+    icon: Code2,
+    title: "An MVP That Can’t Scale",
+    description:
+      "You want to launch fast - but not rewrite everything later. Many MVPs fail because the foundation wasn’t built for scale.",
+  },
+  {
+    icon: Search,
+    title: "Invisible in Search & AI Results",
+    description:
+      "Your site exists, but it’s not being recommended - by Google or AI search engines.Without structured, SEO-aware architecture, your product stays invisible.",
   },
   {
     icon: BarChart4,
@@ -41,12 +47,7 @@ const problems = [
     description:
       "What started simple becomes fragile fast. Without proper architecture, every new feature feels risky and expensive.",
   },
-  {
-    icon: Code2,
-    title: "An MVP That Can’t Scale",
-    description:
-      "You want to launch fast — but not rewrite everything later. Many MVPs fail because the foundation wasn’t built for scale.",
-  },
+
   {
     icon: Globe,
     title: "Decisions Without Reliable Data",
@@ -62,7 +63,7 @@ const ProblemSection = ({ className }: Props) => {
         <SectionHeader
           name="The Reality"
           title="Common Problems I Help You Solve"
-          description="If any of these sound familiar, you’re in the right place."
+          description="If any of these sound familiar, you’re not alone - and I can help."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3">

@@ -10,21 +10,21 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    years: "2018-2021",
-    title: "Lead Designer",
-    company: "Apple",
+    years: "2025-Current",
+    title: "Frontend Developer",
+    company: "Inventiro",
   },
   {
     id: 2,
-    years: "2022-2023",
-    title: "Product Designer",
-    company: "Spotify",
+    years: "2023-2025",
+    title: "Frontend Developer",
+    company: "Bit Byte Technology",
   },
   {
     id: 3,
-    years: "2023-2025",
-    title: "UXUI Designer",
-    company: "Amazon",
+    years: "2022-2023",
+    title: "Full Stack Developer",
+    company: "Next Barisal",
   },
 ];
 

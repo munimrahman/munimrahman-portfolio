@@ -7,7 +7,7 @@ import AboutPageExperienceSection from "@/components/containers/AboutPage/AboutP
 import AboutClientsSection from "@/components/containers/AboutPage/AboutClientsSection";
 import FAQSection from "@/components/containers/Shared/FAQSection";
 import { FAQItem } from "@/types";
-import ServicesCTASection from "@/components/containers/Shared/SearviceCTASection";
+import ServicesCTASection from "@/components/containers/Shared/ServiceCTASection";
 import { ContactFormSectionV2 } from "@/components/containers/Shared/ContactFormSection";
 
 const faqData: FAQItem[] = [
